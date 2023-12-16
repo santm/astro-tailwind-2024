@@ -14,11 +14,8 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
     <slot />
     <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
+    <script is:inline src="/preline.js"></script>
   </body>
 </html>
