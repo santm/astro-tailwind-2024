@@ -12,7 +12,7 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="bg-white bg-[url('/images/hero-gradient.svg')] dark:bg-gray-800 dark:bg-[url('/images/hero-gradient-dark.svg')]">
     <Header />
     <slot />
     <Footer />
