@@ -13,9 +13,13 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body class="bg-white bg-[url('/images/hero-gradient.svg')] dark:bg-gray-800 dark:bg-[url('/images/hero-gradient-dark.svg')]">
-    <Header />
-    <slot />
-    <Footer />
+    <div class="overflow-hidden">
+      <main id="content" role="main">
+      <Header />
+      <slot />
+      <Footer />  
+      </main>
+    </div> <!--overflow-hidden -->
     <script is:inline src="/preline.js"></script>
   </body>
 </html>
