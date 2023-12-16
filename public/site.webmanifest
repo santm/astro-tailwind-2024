@@ -1,0 +1,15 @@
+{
+    "name": "Aashiyana of Pamela Santanu",
+    "short_name": "santm.com",
+    "description": "Rumblings on life, travel, photography, wildlife, running, baking, cooking  or anything under sun",
+    "start_url": "/",
+    "display": "standalone",
+     "icons": [
+      {
+        "src": "/santm-icon-512.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      }
+    ]
+  }
+  
