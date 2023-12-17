@@ -88,9 +88,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
                     class={`lg:after:block lg:after:mx-auto lg:after:h-[0.15em] lg:after:bottom-0 lg:after:w-0 lg:after:bg-pink-500 lg:after:transition-[all_ease_in_out_300ms] lg:after:mt-1 lg:hover:after:w-full block text-lg font-medium py-3 md:py-6 ${
                       isActive ? "text-pink-500" : "text-black dark:text-white"
                     }`}
-                    href={href}
-                    data-astro-prefetch
-                  >
+                    href={href}>
                     {label}
                   </a>
                 );
@@ -100,7 +98,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
               <!-- theme swicth-->
               <button
                 type="button"
-                class="hs-dark-mode-active:hidden block hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
+                class="hs-dark-mode-active:hidden block hs-dark-mode group items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
                 data-hs-theme-click-value="dark"
               >
                 <svg
@@ -119,7 +117,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
               </button>
               <button
                 type="button"
-                class="hs-dark-mode-active:block hidden hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
+                class="hs-dark-mode-active:block hidden hs-dark-mode group items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
                 data-hs-theme-click-value="light"
               >
                 <svg

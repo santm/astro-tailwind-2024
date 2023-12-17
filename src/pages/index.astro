@@ -32,7 +32,14 @@ import hero27Img from  '../assets/hero_image/27.webp';
 //
 import { getCollection } from "astro:content";
 const allPosts = (await getCollection('blog')); 
-const sortedPosts = allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+//const sortedPosts = allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+const sortedPosts = allPosts.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate) as any; // Explicitly specify the type
+  const dateB = new Date(b.data.pubDate) as any; // Explicitly specify the type
+
+  return dateB - dateA;
+});
+
 const last4posts = sortedPosts.slice(0,4);
 import BlogCard3 from "../components/BlogCard3.astro";
 ---

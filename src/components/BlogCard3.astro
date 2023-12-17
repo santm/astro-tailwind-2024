@@ -3,7 +3,7 @@ const { title, link, img_src, alt, description, category, pubDate } = Astro.prop
 const originalDate = new Date(pubDate);
 
 // Define options for formatting
-const options = {  month: 'short', day: 'numeric', year: 'numeric' };
+const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' };
 
 // Format the date
 const formattedDate = originalDate.toLocaleString('en-US', options);
@@ -36,10 +36,10 @@ const formattedDate = originalDate.toLocaleString('en-US', options);
       </p>
     </div>
     <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
-      <span class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm  disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white  dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+      <span class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm  disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white  dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
         {formattedDate}
       </span>
-      <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 font-medium !text-blue-gray-900 !transition-colors hover:!text-pink-500" href={link}>
+      <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 font-medium !text-blue-gray-900 !transition-colors hover:!text-pink-500" href={link}>
         Read More
       </a>
     </div>
