@@ -1,0 +1,186 @@
+---
+const textLinks: { label: string; href: string }[] = [
+  { label: "Blog", href: "/blog/" },
+  { label: "Nature", href: "/birdsandwildlife/" },
+  { label: "Travel", href: "/travelalbums/" },
+  { label: "About", href: "/about/" },
+  { label: "Tags", href: "/tags/" },
+];
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+<header>
+  <nav class="fixed inset-x-0 z-20 w-full border-b border-gray-100 bg-white/80 dark:border-gray-700/30 dark:bg-gray-900/80">
+    <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
+      <div class="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
+        <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
+          <!-- logo -->
+          <a
+            href="/"
+            aria-label="website logo"
+            class="nav-link flex items-center space-x-2 text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+            >SANTM
+          </a>
+          <!-- navbar toggler -->
+          <button
+            aria-label="humburger"
+            id="hamburger"
+            class="relative -mr-6 p-6 lg:hidden"
+          >
+            <div
+              aria-hidden="true"
+              id="line"
+              class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"
+            >
+            </div>
+            <div
+              aria-hidden="true"
+              id="line2"
+              class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"
+            >
+            </div>
+          </button>
+          <!-- navbar toggler -->
+        </div>
+        <!-- there was another div in the old code here-->
+        <!--main link  -->
+        <div
+          id="navlinks"
+          class="invisible absolute top-full right-0 z-20 w-2/5 origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-auto lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none dark:lg:bg-transparent"
+        >
+          <div class="text-gray-600 dark:text-gray-300 lg:pr-4">
+            <ul
+              class="space-y-6 text-base font-medium tracking-wide lg:flex lg:space-y-0 lg:text-sm"
+            >
+              {
+                textLinks.map(({ label, href }) => {
+                  const menuItemParentPath = href.slice(
+                    1,
+                    href.lastIndexOf("/")
+                  ); // Extract the parent path
+
+                  const isActive = currentPath.includes(menuItemParentPath);
+
+                  return (
+                    <li
+                      class={`block md:px-4 text-lg font-bold ${
+                        isActive
+                          ? "text-pink-500"
+                          : "text-black dark:text-white"
+                      }`}
+                    >
+                      <span class="lg:after:block lg:after:mx-auto lg:after:h-[0.15em] lg:after:bottom-0 lg:after:w-0 lg:after:bg-pink-500 lg:after:transition-[all_ease_in_out_300ms] lg:after:mt-1 lg:hover:after:w-full">
+                        <a href={href} data-astro-prefetch>
+                          {label}
+                        </a>
+                      </span>
+                    </li>
+                  );
+                })
+              }
+            </ul>
+          </div>
+          <div
+            id="line-santm"
+            class="hidden lg:inline-flex rotate-90 m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"
+          >
+          </div>
+
+          <div
+            class="mt-12 -ml-1 flex w-full flex-col space-y-2 border-blue-800/10 dark:border-gray-700 sm:flex-row md:w-max lg:mt-0 lg:mr-6 lg:space-y-0 lg:border-1 lg:pl-6"
+          >
+            <a
+              href="/search/"
+              class="relative ml-auto flex h-9 w-full items-center justify-center before:absolute before:inset-0 before:rounded-full before:bg-blue-800 before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-blue-800 sm:px-4 lg:before:border lg:before:border-gray-200 lg:before:bg-gray-100 lg:dark:before:bg-gray-800"
+            >
+              <span
+                class="relative text-sm font-semibold text-white lg:text-blue-800 lg:dark:text-white"
+                >Search</span
+              >
+            </a>
+          </div>
+          <button
+            id="themeToggle"
+            aria-label="switch theme"
+            class="switcher group relative hidden h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 lg:flex"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:-rotate-90 group-hover:fill-blue-900 dark:hidden"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- main links -->
+
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<style>
+  #toggle_nav:checked ~ div #hamburger #line {
+    @apply translate-y-1.5 rotate-45;
+  }
+
+  #toggle_nav:checked ~ div #hamburger #line2 {
+    @apply -translate-y-1 -rotate-45;
+  }
+
+  .toggled div:first-child {
+    @apply translate-y-1.5 rotate-45;
+  }
+  .toggled div:last-child {
+    @apply -translate-y-1 -rotate-45;
+  }
+</style>
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+
+  window.localStorage.setItem("theme", theme);
+
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    element.classList.toggle("dark");
+
+    const isDark = element.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  };
+
+  document
+    .getElementById("themeToggle")
+    .addEventListener("click", handleToggleClick);
+</script>
