@@ -1,0 +1,46 @@
+---
+import jsonData from '../assets/data/about_timeline.json';
+import { getImage } from "astro:assets";
+import aarushAvatarPath from '../assets/avatars/aarush_profile.webp';
+import pamelaAvatarPath from '../assets/avatars/pamela_profile.webp';
+import santanuAvatarPath from '../assets/avatars/santanu_profile.webp';
+
+const pathsData = jsonData.paths;
+
+const avatars = {
+  aarush: aarushAvatarPath,
+  pamela: pamelaAvatarPath,
+  santanu: santanuAvatarPath,
+};
+
+const imageSizes = [320, 427, 533, 640];
+
+const getImageSources = async (avatar) => {
+  const imageSources = {};
+  for (const size of imageSizes) {
+    const avatarImage = await getImage({ src: avatar, width: size });
+    imageSources[size] = avatarImage.src;
+  }
+  return imageSources;
+};
+
+const avatarImageSources = {};
+for (const [avatarName, avatarPath] of Object.entries(avatars)) {
+  avatarImageSources[avatarName] = await getImageSources(avatarPath);
+}
+---
+
+<div>
+  {Object.entries(avatarImageSources).map(([avatarName, sources]) => (
+    <img
+      key={avatarName}
+      srcSet={`${sources[320]} 320w, ${sources[427]} 427w, ${sources[533]} 533w, ${sources[640]} 640w`}
+      src={sources[640]}
+      sizes="(max-width: 768px) 640px, (max-width: 1024px) 427px, (max-width: 1280px) 533px, 640px"
+      class="mx-auto h-64 w-64 rounded-xl object-cover md:h-64 md:w-48 lg:h-80 lg:w-64"
+      alt={avatarName}
+      loading="lazy"
+    />
+    
+  ))}
+</div>
