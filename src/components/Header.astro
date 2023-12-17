@@ -5,6 +5,7 @@ const textLinks: { label: string; href: string }[] = [
   { label: "Travel", href: "/travelalbums/" },
   { label: "About", href: "/about/" },
   { label: "Tags", href: "/tags/" },
+  { label: "Search", href: "/search/" },
 ];
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
@@ -23,7 +24,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         <a
           href="/"
           aria-label="website logo"
-          class="nav-link flex items-center space-x-2 text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+          class="font-heading nav-link flex items-center space-x-2 text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
           >SANTM
         </a>
         <div class="md:hidden">

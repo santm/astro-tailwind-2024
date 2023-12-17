@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Search";
+---
+<BaseLayout pageTitle={pageTitle}>
+    <div class="relative">
+    <!-- Gradients -->
+    <div aria-hidden="true" class="flex absolute -top-48 start-0 -z-[1]">
+        <div class="bg-purple-200 opacity-30 blur-3xl w-[1036px] h-[600px] dark:bg-purple-900 dark:opacity-20"></div>
+        <div class="bg-slate-200 opacity-90 blur-3xl w-[577px] h-[300px] transform translate-y-32 dark:bg-slate-800/60"></div>
+    </div>
+    <!-- End Gradients -->
+    <div class="max-w-[85rem] mx-auto">
+        <div id="search" class="mb-3 pt-0 text-center">
+            <input id="search" type="text" placeholder="Search......" class="px-2 py-1 placeholder-slate-300 text-slate-600 relative bg-white  rounded text-lg border-1 border-rose-600 shadow outline focus:outline-none focus:ring w-8/12"/>
+        </div>
+
+        <div id="results"/>
+        <script is:inline>
+            document.querySelector('#search')?.addEventListener('input', async (e) => {
+              // only load the pagefind script once
+              if (e.target.dataset.loaded !== 'true') {
+                e.target.dataset.loaded = 'true'
+                // load the pagefind script
+                window.pagefind = await import("/pagefind/pagefind.js");
+              }
+          
+              // search the index using the input value
+              const search = await window.pagefind.search(e.target.value)
+          
+              // clear the old results
+              document.querySelector('#results').innerHTML = ''
+          
+              // add the new results
+              for (const result of search.results) {
+                const data = await result.data()
+                document.querySelector('#results').innerHTML += `
+                  <a class="underline decoration-pink-500" href="${data.url}">
+                    <h3 class="text-xl lg:text-3xl font-bold dark:text-white">${data.meta.title}</h3> </a>
+                    <p class="prose dark:prose-invert">${data.excerpt}</p>`
+              }
+            })
+        </script>
+
+    </div>
+    </div>
+</BaseLayout>
