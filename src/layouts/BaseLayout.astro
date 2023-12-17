@@ -1,6 +1,6 @@
 ---
 const { pageTitle } = Astro.props;
-import Header from "../components/Header.astro";
+import Header from "../components/NewHeader.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -12,49 +12,7 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="" />
-    <title>{pageTitle}</title>
-    <script>
-      const navlinks = document.querySelector("#navlinks");
-      const hamburger = document.querySelector("#hamburger");
-      const layer = document.querySelector("#navLayer");
-      const links = [...navlinks.querySelector("ul").children];
-
-      let isToggled = false;
-
-      function toggleNavlinks() {
-        if (isToggled) {
-          navlinks.classList.add(
-            "!visible",
-            "!scale-100",
-            "!opacity-100",
-            "!lg:translate-y-0"
-          );
-          hamburger.classList.add("toggled");
-          layer.classList.add("origin-top", "scale-y-100");
-        } else {
-          navlinks.classList.remove(
-            "!visible",
-            "!scale-100",
-            "!opacity-100",
-            "!lg:translate-y-0"
-          );
-          hamburger.classList.remove("toggled");
-          layer.classList.remove("origin-top", "scale-y-100");
-        }
-      }
-
-      hamburger.addEventListener("click", () => {
-        isToggled = !isToggled;
-        toggleNavlinks();
-      });
-
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          isToggled = !isToggled;
-          toggleNavlinks();
-        });
-      });
-    </script>
+    <title>{pageTitle}</title>    
   </head>
   <body class="bg-white dark:bg-gray-900">
     <Header />
