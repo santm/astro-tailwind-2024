@@ -12,14 +12,9 @@ allPosts_year.forEach(post => {
 });
 import Paginator from "../../components/Paginator.astro" ;
 import BlogListing from "../../components/BlogListing.astro" ;
-export async function getStaticPaths({ paginate }: any) {
+export async function getStaticPaths({ paginate }) {
 const allPosts = (await getCollection('blog'));    
-const sortedPosts = allPosts.sort((a, b) => {
-  const dateA = new Date(a.data.pubDate) as any; // Explicitly specify the type
-  const dateB = new Date(b.data.pubDate) as any; // Explicitly specify the type
-
-  return dateB - dateA;
-});
+const sortedPosts = allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
 return paginate(sortedPosts, {
       pageSize: 10
     })
