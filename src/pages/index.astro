@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Home Page";
 import HeroSection from '../components/HeroSection.astro';
+import LatestBlogs from '../components/LatestBlogs.astro';
 import { getCollection } from "astro:content";
 const allPosts = (await getCollection('blog')); 
 //const sortedPosts = allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
@@ -19,6 +20,7 @@ import BlogCard3 from "../components/BlogCard3.astro";
 <BaseLayout pageTitle={pageTitle}>
   <main class="space-y-40 mb-40">
     <HeroSection/>
+    <LatestBlogs/>
 
   </main>
   
