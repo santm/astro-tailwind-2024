@@ -57,14 +57,8 @@ const formatMonth = (date: string | number | Date) => {
 // 
 ---
 <BaseLayout pageTitle={title}>
-  <main class="space-y-40 mb-40">
-    <div class="relative" id="tags">
-      <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
-        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-      </div>
-      <Container>
-        <div class="relative pt-36 ml-auto">
+
+        <div>
           <div id="author_block" class="flex my-6 justify-between">
             <div class="flex items-center">
               <a href={`/authors/${author}`}><img class="w-20 h-20 rounded-full mr-2 p-1 ring-2 ring-gray-700 dark:ring-gray-300" src={`/${author.toLowerCase()}_profile.webp`} alt={author} loading="lazy"></a>
@@ -114,8 +108,6 @@ const formatMonth = (date: string | number | Date) => {
                   <article class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none text-justify tracking-wide"><slot /></article> 
           
         </div>
-      </div>
-  </Container>
-  </main>
+
 
 </BaseLayout>

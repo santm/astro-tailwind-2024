@@ -1,0 +1,8 @@
+.relative_top_most {
+    background-image: url(/images/media/light-bg.jpg);
+    background-size: 150rem
+}
+.dark .relative_top_most {
+    background-image: url(/images/media/dark-bg.jpg);
+    background-size: 86.125rem
+}

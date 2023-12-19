@@ -1,8 +1,9 @@
 ---
 const { pageTitle } = Astro.props;
-//import Header1 from "../components/NewHeader.astro";
+import Container from "../components/Container.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import '../assets/styles/custom.css';
 ---
 
 <!doctype html>
@@ -55,10 +56,16 @@ import Footer from "../components/Footer.astro";
           </script>
 
   </head>
-  <body class="bg-white dark:bg-gray-900">
+  <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
     <!-- <Header1 /> -->
     <Header/>
-    <slot />
+    <div class="relative">
+      <Container>  
+          <div class="relative pt-36 pb-10 ml-auto">
+              <slot />
+          </div>
+      <Container />
+  </div>
     <Footer />
     
 </body>

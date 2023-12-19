@@ -12,12 +12,11 @@ import jsonData from "../assets/data/about_timeline.json";
 const jsonDataTyped: TimelineItem[] = jsonData;
 //const pathsData = jsonDataTyped[0].paths; // Accessing paths of the first item, adjust as needed
 
-
 //const pathsData = jsonData.paths;
 import { getImage } from "astro:assets";
-import aarushAvatarPath from '../assets/avatars/aarush_profile.webp';
-import pamelaAvatarPath from '../assets/avatars/pamela_profile.webp';
-import santanuAvatarPath from '../assets/avatars/santanu_profile.webp';
+import aarushAvatarPath from "../assets/avatars/aarush_profile.webp";
+import pamelaAvatarPath from "../assets/avatars/pamela_profile.webp";
+import santanuAvatarPath from "../assets/avatars/santanu_profile.webp";
 
 interface ImageMetadata {
   key: string;
@@ -37,7 +36,7 @@ const avatars: Avatars = {
   pamela: { src: pamelaAvatarPath },
   santanu: { src: santanuAvatarPath },
 };
-// santm this TS error also could not fixed 
+// santm this TS error also could not fixed
 const imageSizes = [320, 427, 533, 640];
 
 interface ImageSources {
@@ -63,114 +62,68 @@ for (const avatarName in avatars) {
 }
 
 // Use avatarImageSources object as needed to access specific avatar images and sizes
-
 ---
 
-<div class="relative" id="about">
-  <div
-    aria-hidden="true"
-    class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
-  >
-    <div
-      class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
-    >
-    </div>
-    <div
-      class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"
-    >
-    </div>
-  </div>
-  <Container>
-    <div class="relative pt-36 ml-auto">
-      <h1
-        class="pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-      >
-        About Us
-      </h1>
-      <p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">
-        We like to travel, make new friends and explore and understand diversity
-        and cultures at its best. We try to do that along with day jobs. Check
-        out our photos, travelog, random thoughts and creativity. <br />
-      </p>
-      <!-- grid start-->
-      <div class="grid items-center gap-12 md:grid-cols-3">
+<h1 class="pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">About Us</h1>
+<p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">
+  We like to travel, make new friends and explore and understand diversity and cultures at its best. We try to do that along with day jobs. Check out our photos, travelog, random thoughts and creativity. <br />
+</p>
+<!-- grid start-->
+<div class="grid items-center gap-12 md:grid-cols-3">
+  {
+    Object.entries(avatarImageSources).map(([avatarName, sources]) => (
+      <div class="space-y-4 text-center">
+        <img
+          key={avatarName}
+          srcSet={`${sources[320]} 320w, ${sources[427]} 427w, ${sources[533]} 533w, ${sources[640]} 640w`}
+          src={sources[640]}
+          sizes="(max-width: 768px) 640px, (max-width: 1024px) 427px, (max-width: 1280px) 533px, 640px"
+          class="mx-auto h-64 w-64 rounded-xl object-cover md:h-64 md:w-48 lg:h-80 lg:w-64"
+          alt={avatarName}
+          loading="lazy"
+        />
+        <div>
+          <h4 class="capitalize text-2xl text-gray-700 dark:text-white">{avatarName}</h4>
+        </div>
+      </div>
+    ))
+  }
+</div>
+<!-- grid end -->
+<!-- TimeLine -->
+<div class="max-w-[85rem] mx-auto">
+  <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+    <div class="space-y-5 md:space-y-8">
+      <div class="space-y-3">
         {
-          Object.entries(avatarImageSources).map(([avatarName, sources]) => (
-            <div class="space-y-4 text-center">
-              <img
-                key={avatarName}
-                srcSet={`${sources[320]} 320w, ${sources[427]} 427w, ${sources[533]} 533w, ${sources[640]} 640w`}
-                src={sources[640]}
-                sizes="(max-width: 768px) 640px, (max-width: 1024px) 427px, (max-width: 1280px) 533px, 640px"
-                class="mx-auto h-64 w-64 rounded-xl object-cover md:h-64 md:w-48 lg:h-80 lg:w-64"
-                alt={avatarName}
-                loading="lazy"
-              />
-              <div>
-                <h4 class="capitalize text-2xl text-gray-700 dark:text-white">
-                  {avatarName}
-                </h4>
+          jsonData.map((entry, entryIndex) => (
+            <div>
+              <div class="ps-2 my-2 first:mt-0">
+                <h3 class="text-xs font-medium uppercase text-gray-500 dark:text-gray-400">{entry.date}</h3>
+              </div>
+              <div class="flex gap-x-3">
+                <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700">
+                  <div class="relative z-10 w-7 h-7 flex justify-center items-center">
+                    <svg class="fill-purple-700 dark:fill-purple-200" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox={entry.viewbox}>
+                      {entry.paths.map((path, pathIndex) => (
+                        <path fill={path.fill} d={path.d} />
+                      ))}
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="grow pt-0.5 pb-8">
+                  <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">{entry.title}</h3>
+                  <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">{entry.description} </p>
+                </div>
               </div>
             </div>
           ))
         }
       </div>
-      <!-- grid end -->
-      <!-- TimeLine -->
-      
-      <div class="max-w-[85rem] mx-auto">
-        <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
-          <div class="space-y-5 md:space-y-8">
-            <div class="space-y-3">
-              
-              {
-                jsonData.map((entry, entryIndex) => (
-                  
-                  <div>
-                    <div class="ps-2 my-2 first:mt-0">
-                      <h3 class="text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
-                        {entry.date}
-                      </h3>
-                    </div>
-                    <div class="flex gap-x-3">
-                      <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700">
-                        <div class="relative z-10 w-7 h-7 flex justify-center items-center">
-                          <svg
-                            class="fill-purple-700 dark:fill-purple-200"
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="1em"
-                            viewBox={entry.viewbox}
-                          >
-                            {entry.paths.map((path, pathIndex) => (
-                              <path fill={path.fill} d={path.d} />
-                            ))}
-                          </svg>
-                        </div>
-                      </div>
-
-                      <div class="grow pt-0.5 pb-8">
-                        <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
-                          {entry.title}
-                        </h3>
-                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                          {entry.description}{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                ))
-              }
-
-            
-            </div>
-          </div>
-        
-        </div>
-      </div>
     </div>
-      <!-- TimeLine -->
-    </div>
-  </Container>
+  </div>
+</div><!-- TimeLine -->
+<div>
+  <span class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none py-4">Thank You! 🙏 for your time to read this far, little intrigued and a bit curious, what might be the reason behind the same 😎, be in touch.</span>
 </div>
