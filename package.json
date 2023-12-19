@@ -1,7 +1,7 @@
 {
-  "name": "agencex-astro",
+  "name": "astro-tailwind-2024",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
