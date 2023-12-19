@@ -1,54 +1,56 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Container from "../components/Container.astro";
 const pageTitle = "Search";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
   <main class="space-y-40 mb-40">
     <div class="relative" id="tags">
-      <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+      <!-- <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
         <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
         <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-      </div>
+      </div> **santm this **hidden true breaks the the **search page we need a better solution later--> 
       <Container>
         <div class="relative pt-36 ml-auto">
           <h1 class="pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Search</h1>
           <p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">A simple client side search page using pagefind</p>
         </div>
+        <div id="search" class="mb-3 pt-0 text-center">
+          <input id="search" type="text" placeholder="Search......" class="px-2 py-1 placeholder-slate-300 text-slate-600 relative bg-white  rounded text-lg border-1 border-rose-600 shadow outline focus:outline-none focus:ring w-8/12"/>
+            
+        </div>
+      <div id="results"/>
+      <script is:inline>
+        document.querySelector('#search')?.addEventListener('input', async (e) => {
+          // only load the pagefind script once
+          if (e.target.dataset.loaded !== 'true') {
+            e.target.dataset.loaded = 'true'
+            // load the pagefind script
+            window.pagefind = await import("/pagefind/pagefind.js");
+          }
       
-    
-    <div id="search" class="mb-3 pt-0 text-center">
-      <input id="search" type="text" placeholder="Search......" class="px-2 py-1 placeholder-slate-300 text-slate-600 relative bg-white  rounded text-lg border-1 border-rose-600 shadow outline focus:outline-none focus:ring w-8/12"/>
-  </div>
-
-  <div id="results"/>
-  <script is:inline>
-      document.querySelector('#search')?.addEventListener('input', async (e) => {
-        // only load the pagefind script once
-        if (e.target.dataset.loaded !== 'true') {
-          e.target.dataset.loaded = 'true'
-          // load the pagefind script
-          window.pagefind = await import("/pagefind/pagefind.js");
-        }
-    
-        // search the index using the input value
-        const search = await window.pagefind.search(e.target.value)
-    
-        // clear the old results
-        document.querySelector('#results').innerHTML = ''
-    
-        // add the new results
-        for (const result of search.results) {
-          const data = await result.data()
-          document.querySelector('#results').innerHTML += `
-            <a class="underline decoration-pink-500" href="${data.url}">
-              <h3 class="text-xl lg:text-3xl font-bold dark:text-white">${data.meta.title}</h3> </a>
-              <p class="prose dark:prose-invert">${data.excerpt}</p>`
-        }
-      })
-  </script>
+          // search the index using the input value
+          const search = await window.pagefind.search(e.target.value)
+      
+          // clear the old results
+          document.querySelector('#results').innerHTML = ''
+      
+          // add the new results
+          for (const result of search.results) {
+            const data = await result.data()
+            document.querySelector('#results').innerHTML += `
+              <a class="underline decoration-pink-500" href="${data.url}">
+                <h3 class="text-xl lg:text-3xl font-bold dark:text-white">${data.meta.title}</h3> </a>
+                <p class="prose dark:prose-invert">${data.excerpt}</p>`
+          }
+        })
+      </script>
     </div>
-  </Container>
+  
+     
+  
+      </Container>
+    </div>
   </main>
-
 </BaseLayout>
