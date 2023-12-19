@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import PostPreviewList from '../../../components/BlogListing.astro';
+import Paginator from "../../../components/Paginator.astro";
+
+export async function getStaticPaths({ paginate }: any) {
+  const allPosts = await getCollection('blog');
+  const sortedPosts = allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+  const allAuthors = [...new Set(allPosts.flatMap((post) => post.data.author).flat())];
+
+  return allAuthors.flatMap((author) => {
+    const authorPosts = sortedPosts.filter((post) => post.data.author === author);
+    return paginate(authorPosts, {
+      params: { author },
+      props: {
+        authorName: author,
+        posts: authorPosts,
+      },
+      pageSize: 10,
+    });
+  });
+}
+const { page } = Astro.props;
+//const { params } = Astro.request; `Posts of ${yearName}`;
+const { posts, authorName } = Astro.props;
+const pageTitle = `Posts by ${authorName}`;
+---
+<BaseLayout pageTitle={pageTitle}>
+    <div data-pagefind-ignore>
+        <h1 class="pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{pageTitle}</h1>
+        <PostPreviewList posts={page.data} />
+        <Paginator page={page} />
+    </div>
+</BaseLayout>

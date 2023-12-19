@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const pageTitle = "Authors of this blog";
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("blog");
+const authors = [...new Set([].concat.apply([], allPosts.flatMap(post => post.data.author)))]
+
+const authorPostCount = {};
+allPosts.forEach(post => {
+  const author = post.data.author;
+  authorPostCount[author] = (authorPostCount[author] || 0) + 1;
+});
+---
+<BaseLayout pageTitle={pageTitle}>
+    <div data-pagefind-ignore>
+        <h1 class="pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{pageTitle}</h1>
+        <p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">We all write to chip in</p>
+        <ul class="tag-list">
+            {authors.flatMap((author) => (
+                <li class="author"><a  href={`/authors/${author}/`} title={`View "${ authorPostCount[author] }" posts written by "${author.charAt(0).toUpperCase() + author.slice(1) }"`}>{author.charAt(0).toUpperCase() + author.slice(1) }</a><span class="hidden lg:inline text-[9px] sub"> ({ authorPostCount[author]})</span> </li>
+            ))}
+        </ul>
+      </div>
+</BaseLayout>
+<style>
+    .tag-list {
+        @apply list-none flex gap-2 flex-wrap
+    }
+    .author {
+        @apply inline-block text-xl px-4 py-1 rounded-full text-purple-600 bg-purple-50 dark:bg-purple-200 dark:text-purple-800 hover:bg-purple-600 hover:text-purple-300 dark:hover:bg-purple-800 dark:hover:text-purple-200
+    }
+</style>
