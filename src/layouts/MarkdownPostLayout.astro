@@ -1,11 +1,13 @@
 ---
-import Layout from './BaseLayout.astro';
+import BaseLayout from './BaseLayout.astro';
+import Container from "../components/Container.astro";
 import type { CollectionEntry } from "astro:content";
 //import { Image, Picture } from '@astrojs/image/components';
 type Props = CollectionEntry<"blog">["data"];
 const { title, tags, description, pubDate, author, image } = Astro.props;
 const author_profile = `${author}_profile.webp`;
-const isImageSrcNotBlank = image.src.trim() !== '';
+//const isImageSrcNotBlank = image.src.trim() !== '';
+const isImageSrcNotBlank = image && image.src && image.src.trim() !== '';
 //const authorProfile = `/${author()}_profile.webp`
 const monthNames = [
   "January",
@@ -54,32 +56,31 @@ const formatMonth = (date: string | number | Date) => {
 
 // 
 ---
-<Layout content={{ title, description }}>
-	<main class="space-y-40 mb-40">
-		<div class="relative pt-0"><!-- was py-16 -->
-            <div>
-              <div></div>
-              <div></div>
+<BaseLayout pageTitle={title}>
+  <main class="space-y-40 mb-40">
+    <div class="relative" id="tags">
+      <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+      </div>
+      <Container>
+        <div class="relative pt-36 ml-auto">
+          <div id="author_block" class="flex my-6 justify-between">
+            <div class="flex items-center">
+              <a href={`/authors/${author}`}><img class="w-20 h-20 rounded-full mr-2 p-1 ring-2 ring-gray-700 dark:ring-gray-300" src={`/${author.toLowerCase()}_profile.webp`} alt={author} loading="lazy"></a>
+              <div class="text-lg">
+                <a href={`/authors/${author}`} class="leading-none transition duration-500 ease-in-out prose md:prose-lg lg:prose-xl dark:prose-invert font-bold">{author}</a>
+                <p class="prose dark:prose-invert">
+                  <time>{formatMonth(pubDate)}, <a href={`/years/${new Date(pubDate).getFullYear()}`}>{`${new Date(pubDate).getFullYear()}`}</a></time>
+
+                 
+                </p>
+              </div>
             </div>
-
-              
-              
-                <div id="author_block" class="flex my-6 justify-between">
-                  <div class="flex items-center">
-                    <a href={`/authors/${author}`}><img class="w-20 h-20 rounded-full mr-2 p-1 ring-2 ring-gray-700 dark:ring-gray-300" src={`/${author.toLowerCase()}_profile.webp`} alt={author} loading="lazy"></a>
-                    <div class="text-lg">
-                      <a href={`/authors/${author}`} class="leading-none transition duration-500 ease-in-out prose md:prose-lg lg:prose-xl dark:prose-invert font-bold">{author}</a>
-                      <p class="prose dark:prose-invert">
-                        <time>{formatMonth(pubDate)}, <a href={`/years/${new Date(pubDate).getFullYear()}`}>{`${new Date(pubDate).getFullYear()}`}</a></time>
-
-                       
-                      </p>
-                    </div>
-                  </div>
-                  <!-- keep this blank -->
-                </div> <!--author_block-->
-                <h1 class="pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{title}</h1>
-                <p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">{description}</p>          
+            <!-- keep this blank -->
+          </div> <!--author_block-->
+          <h1 class="pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{title}</h1>
+          <p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">{description}</p>          
                 <div id="tags" class="prose dark:prose-invert max-w-none">
                   {tags.length > 0 && (
                     <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="inline-block h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -111,6 +112,10 @@ const formatMonth = (date: string | number | Date) => {
 
                 
                   <article class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none text-justify tracking-wide"><slot /></article> 
+          
         </div>
-	</main>
-</Layout>
+      </div>
+  </Container>
+  </main>
+
+</BaseLayout>
