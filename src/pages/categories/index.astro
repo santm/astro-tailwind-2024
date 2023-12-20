@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const pageTitle = "Categories of this blog";
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("blog");
+const categories = [...new Set([].concat.apply([], allPosts.flatMap(post => post.data.category)))]
+
+const categoryPostCount = {};
+allPosts.forEach(post => {
+  const category = post.data.category;
+  categoryPostCount[category] = (categoryPostCount[category] || 0) + 1;
+});
+---
+<BaseLayout pageTitle={pageTitle}>
+    <div data-pagefind-ignore>
+        <h1 class="pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{pageTitle}</h1>
+        <p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">The blog posts are mostly divided in these broad section</p>
+        <ul class="tag-list">
+            {categories.flatMap((category) => (
+                <li class="category"><a  href={`/categories/${category}/`} title={`View "${ categoryPostCount[category] }" posts written by "${category.charAt(0).toUpperCase() + category.slice(1) }"`}>{category.charAt(0).toUpperCase() + category.slice(1) }</a><span class="hidden lg:inline text-[9px] sub"> ({ categoryPostCount[category]})</span> </li>
+            ))}
+        </ul>
+      </div>
+</BaseLayout>
+<style>
+    .tag-list {
+        @apply list-none flex gap-2 flex-wrap
+    }
+    .category {
+        @apply inline-block text-xl px-4 py-1 rounded-full text-purple-600 bg-purple-50 dark:bg-purple-200 dark:text-purple-800 hover:bg-purple-600 hover:text-purple-300 dark:hover:bg-purple-800 dark:hover:text-purple-200
+    }
+</style>
