@@ -1,14 +1,10 @@
 ---
 import { Image } from 'astro:assets';
+// import defaultThumbnail from "https://ik.imagekit.io/santm/rose-large_zgSiv4dBc.webp";
+// import BlogTeaser from '../components/Blogteaser.astro';
 import BaseLayout from './BaseLayout.astro';
-import type { CollectionEntry } from "astro:content";
-//import { Image, Picture } from '@astrojs/image/components';
-type Props = CollectionEntry<"blog">["data"];
 const { title, tags, description, pubDate, author, image } = Astro.props;
-const author_profile = `${author}_profile.webp`;
-//const isImageSrcNotBlank = image.src.trim() !== '';
 const isImageSrcNotBlank = image && image.src && image.src.trim() !== '';
-//const authorProfile = `/${author()}_profile.webp`
 const monthNames = [
   "January",
   "February",
@@ -51,10 +47,6 @@ const formatMonth = (date: string | number | Date) => {
   //return `${day} ${month}, ${year}`;
   return `${day}${daySuffix} ${month}`;
     };
-  
-//      <Picture src={image.src} widths={[400, 600, 1000]} aspectRatio="1:2" sizes="(max-width: 1000px) 100vw, 1000px" formats={['webp']} loading="lazy" alt={image.alt} />
-
-// 
 ---
 <BaseLayout pageTitle={title}>
 
@@ -66,8 +58,6 @@ const formatMonth = (date: string | number | Date) => {
                 <a href={`/authors/${author}`} class="leading-none transition duration-500 ease-in-out prose md:prose-xl lg:prose-2xl dark:prose-invert font-bold">{author}</a>
                 <p class="prose dark:prose-invert">
                   <time>{formatMonth(pubDate)}, <a href={`/years/${new Date(pubDate).getFullYear()}`}>{`${new Date(pubDate).getFullYear()}`}</a></time>
-
-                 
                 </p>
               </div>
             </div>
@@ -100,24 +90,35 @@ const formatMonth = (date: string | number | Date) => {
                     </>
                   )}
                 </div> <!-- tags end -->
-                <!-- {isImageSrcNotBlank && (
-                  <Image  src={image.src} class="border-2 border-gray-600 my-4" alt={image.alt} loading="lazy"/>
-                )} -->
-                {isImageSrcNotBlank && (
+                {isImageSrcNotBlank ? (
                   <>
-                    {image.src.startsWith('http') || image.src.startsWith('https') ? (
-                      <img src={image.src} class="border-2 santm border-gray-600 my-4" alt={image.alt} loading="lazy" />
-                    ) : (
-                      <img src={image.src} class="border-2 border-gray-600 my-4" alt= aa {image.alt} loading="lazy" />
-                      <span>{image.src}</span>
-                    )}
+                    <Image
+                      src={image.src}
+                      class="border-2 border-gray-600 my-4"
+                      alt={image.alt}
+                      loading="lazy"
+                      width="1600"
+                      height="900"
+                    />
                   </>
+                ) : (
+                  image.src.startsWith('http') && (
+                    <img
+                      src={image.src}
+                      class="border-2 santm border-gray-600 my-4"
+                      alt={image.alt}
+                      loading="lazy"
+                    />
+                  )
                 )}
-
-                
+                   
                   <article class="text-pretty prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none text-justify tracking-wide"><slot /></article> 
           
         </div>
 
-
 </BaseLayout>
+<style>
+	[data-my-image] {
+		border: 1px solid red;
+	}
+</style>

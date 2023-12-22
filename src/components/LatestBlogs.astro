@@ -1,9 +1,7 @@
 ---
 import Container from "./Container.astro";
-//
 import { getCollection } from "astro:content";
 const allPosts = (await getCollection('blog')); 
-//const sortedPosts = allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
 const sortedPosts = allPosts.sort((a, b) => {
   const dateA = new Date(a.data.pubDate) as any; // Explicitly specify the type
   const dateB = new Date(b.data.pubDate) as any; // Explicitly specify the type
@@ -31,7 +29,45 @@ import BlogCard3 from "../components/BlogCard3.astro";
           <!-- Grid -->
       <div class="mt-6 md:mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-3 xl:gap-6 lg:items-cente">
           <!-- Card -->
-        {last4posts.map((post) => <BlogCard3 img_src={post.data.image.src} alt={post.data.image.alt} title={post.data.title} link={"/blog/" + post.slug} description={post.data.description} category={post.data.category} pubDate={post.data.pubDate}> </BlogCard>)}
+        <!-- {last4posts.map((post) => <BlogCard3 img_src={post.data.image.src} alt={post.data.image.alt} title={post.data.title} link={"/blog/" + post.slug} description={post.data.description} category={post.data.category} pubDate={post.data.pubDate}> </BlogCard>)} -->
+          {last4posts.map((post) => {
+            // Check if content includes the import statement
+            const hasImageImport = /import\s*\{\s*Image\s*\}\s*from\s*'astro:assets'\s*;?/.test(post.body) ? 1 : 0;
+            
+            // Initialize firstImagePath variables
+            let firstImagePath;
+          
+            // Regular expression to match import statements and capture the path and filename
+            const importRegex = /import\s+(\w+)\s+from\s+'(.+\.((jpe?g)|(png)|(gif)|(webp)))';/g;
+            let match;
+            const imagePaths = [];
+          
+            while ((match = importRegex.exec(post.body)) !== null) {
+              const [, variableName, path] = match;
+              imagePaths.push(path);
+            }
+          
+            // Assign the first image path if it exists
+            if (hasImageImport === 1 && imagePaths.length > 0) {
+              firstImagePath = imagePaths[0];
+              // Add more code as needed
+            }
+          
+            return (
+              <BlogCard3
+                // img_src={post.data.image.src ? post.data.image.src : 'https://ik.imagekit.io/santm/rose-large_zgSiv4dBc.webp'}
+                img_src={post.data.image.src}
+                alt={post.data.image.alt}
+                title={post.data.title}
+                link={"/blog/" + post.slug}
+                description={post.data.description}
+                category={post.data.category}
+                pubDate={post.data.pubDate}
+                hasImageImport={hasImageImport}  {/* Pass the result to the component if needed */}
+                firstImagePath={firstImagePath}  {/* Pass the first image path to the component if needed */}
+              />
+            );
+          })}
           <!-- End Card -->
     </div>
     
