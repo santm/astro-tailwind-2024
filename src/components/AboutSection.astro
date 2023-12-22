@@ -64,7 +64,7 @@ for (const avatarName in avatars) {
 // Use avatarImageSources object as needed to access specific avatar images and sizes
 ---
 
-<h1 class="pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">About Us</h1>
+<h1 class="text-balance pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">About Us</h1>
 <p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">
   We like to travel, make new friends and explore and understand diversity and cultures at its best. We try to do that along with day jobs. Check out our photos, travelog, random thoughts and creativity. <br />
 </p>
@@ -83,7 +83,7 @@ for (const avatarName in avatars) {
           loading="lazy"
         />
         <div>
-          <h4 class="capitalize text-2xl text-gray-700 dark:text-white">{avatarName}</h4>
+          <h4 class="text-balance capitalize text-2xl text-gray-700 dark:text-white">{avatarName}</h4>
         </div>
       </div>
     ))
@@ -99,7 +99,7 @@ for (const avatarName in avatars) {
           jsonData.map((entry, entryIndex) => (
             <div>
               <div class="ps-2 my-2 first:mt-0">
-                <h3 class="text-xs font-medium uppercase text-gray-500 dark:text-gray-400">{entry.date}</h3>
+                <h3 class="text-balance text-xs font-medium uppercase text-gray-500 dark:text-gray-400">{entry.date}</h3>
               </div>
               <div class="flex gap-x-3">
                 <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700">
@@ -113,7 +113,7 @@ for (const avatarName in avatars) {
                 </div>
 
                 <div class="grow pt-0.5 pb-8">
-                  <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">{entry.title}</h3>
+                  <h3 class="text-balance flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">{entry.title}</h3>
                   <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">{entry.description} </p>
                 </div>
               </div>
