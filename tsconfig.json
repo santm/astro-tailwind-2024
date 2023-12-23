@@ -1,7 +1,14 @@
+// {
+//   "extends": "astro/tsconfigs/strict",
+//   "compilerOptions": {
+//     "jsx": "react-jsx",
+//     "jsxImportSource": "preact"
+//   }
+// }
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "allowJs": true,
+    "checkJs": true
   }
 }
