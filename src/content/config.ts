@@ -22,16 +22,16 @@ const blogCollection = defineCollection({
 //   blog: blogCollection,
 // };
 //
-const santCollection = defineCollection({
-  schema: ({ image }) => z.object({
-    coverAlt: z.string(),
-    cover: image().refine((img) => img.width >= 1080, {
-      message: "Cover image must be at least 1080 pixels wide!",
-    }),
-  }),
-});
+// const santCollection = defineCollection({
+//   schema: ({ image }) => z.object({
+//     coverAlt: z.string(),
+//     cover: image().refine((img) => img.width >= 1080, {
+//       message: "Cover image must be at least 1080 pixels wide!",
+//     }),
+//   }),
+// });
 
 export const collections = {
   blog: blogCollection,
-  sant: santCollection,
+  // sant: santCollection,
 };
