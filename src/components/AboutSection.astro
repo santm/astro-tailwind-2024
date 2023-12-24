@@ -1,5 +1,4 @@
 ---
-import Container from "./Container.astro";
 interface TimelineItem {
   date: string;
   title: string;
@@ -65,11 +64,11 @@ for (const avatarName in avatars) {
 ---
 
 <h1 class="text-balance pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">About Us</h1>
-<p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">
+<p class="text-pretty text-justify prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">
   We like to travel, make new friends and explore and understand diversity and cultures at its best. We try to do that along with day jobs. Check out our photos, travelog, random thoughts and creativity. <br />
 </p>
 <!-- grid start-->
-<div class="grid items-center gap-12 md:grid-cols-3">
+<div class="grid items-center gap-12 md:grid-cols-3 pt-4">
   {
     Object.entries(avatarImageSources).map(([avatarName, sources]) => (
       <div class="space-y-4 text-center">
@@ -114,7 +113,7 @@ for (const avatarName in avatars) {
 
                 <div class="grow pt-0.5 pb-8">
                   <h3 class="text-balance flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">{entry.title}</h3>
-                  <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">{entry.description} </p>
+                  <article class="text-pretty mt-1 prose-sm text-gray-600 dark:text-gray-400">{entry.description} </article>
                 </div>
               </div>
             </div>
@@ -125,5 +124,5 @@ for (const avatarName in avatars) {
   </div>
 </div><!-- TimeLine -->
 <div>
-  <span class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none py-4">Thank You! 🙏 for your time to read this far, little intrigued and a bit curious, what might be the reason behind the same 😎, be in touch.</span>
+  <article class="text-pretty prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none py-4">Thank You! 🙏 for your time to read this far, little intrigued and a bit curious, what might be the reason behind the same 😎, be in touch.</article>
 </div>
