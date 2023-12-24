@@ -14,14 +14,10 @@ const sortedPosts = allPosts.sort((a, b) => {
 });
 
 const last4posts = sortedPosts.slice(0,4);
-import BlogCard3 from "../components/BlogCard3.astro";
-
 ---
 <BaseLayout pageTitle={pageTitle}>
   <main class="space-y-40 mb-40">
     <HeroSection/>
     <LatestBlogs/>
-
   </main>
-  
 </BaseLayout>
