@@ -2061,13 +2061,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
-"2023-12-21-tailwind-3-4.mdx": {
-	id: "2023-12-21-tailwind-3-4.mdx";
-  slug: "2023-12-21-tailwind-3-4";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
 };
 
 	};

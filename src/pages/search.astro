@@ -18,6 +18,11 @@ const pageTitle = "Search";
             e.target.dataset.loaded = 'true'
             // load the pagefind script
             window.pagefind = await import("/pagefind/pagefind.js");
+            new PagefindUI({
+    element: "#search",
+    showSubResults: false,
+    debounceTimeoutMs: 500
+});
           }
       
           // search the index using the input value
