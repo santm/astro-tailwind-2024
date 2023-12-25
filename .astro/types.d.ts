@@ -2062,6 +2062,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 };
+"santm-testing-image": {
+"1.mdx": {
+	id: "1.mdx";
+  slug: "1";
+  body: string;
+  collection: "santm-testing-image";
+  data: any
+} & { render(): Render[".mdx"] };
+};
 
 	};
 

@@ -1,0 +1,33 @@
+---
+title : "Google Page Test, CloudFlare and W3 total Cache"
+description : "Optimizing Website Performance"
+pubDate : 2013-07-03
+author : "Santanu"
+category : "Technology"
+tags : [ "technology", "internet", "wordpress", "dns", "CloudFlare", "Tech Notes", "cdn", "w3TotalCache",]
+image :
+    src : ""
+    alt : ""
+---
+
+I recently undertook some performance optimization for two of my websites, **pamela.santm.com** and **blog.santm.com**, both of which run on WordPress 3.6 trunk. To enhance their speed and efficiency, I implemented a combination of tools and techniques. Here's what I did:
+
+![pamela website report](../../assets/blog_pics/2013-07-03_1112.png)
+
+
+1. **Google Page Test**: I began by running Google Page Test on both websites. Surprisingly, Pamela's hobby site performed admirably in the test, but our blog didn't fare as well. It became apparent that there was room for improvement.
+
+2. **Cloudflare**: To leverage the benefits of content delivery networks (CDNs) and enhance security, I moved the DNS details of both websites to Cloudflare. This decision would later prove to be beneficial in terms of performance and protection.
+
+3. **W3 Total Cache**: Next, I installed the W3 Total Cache plugin, a popular choice among WordPress users for optimizing website performance. This plugin helps with caching, minification, and content delivery, among other things.
+
+4. **Image Optimization**: One of the culprits behind the less-than-stellar performance of our blog was the inbuilt gallery of WordPress. It automatically resizes images and serves them on the fly, leading to high server time. To address this, I used the 
+```
+"mogrify -strip \*.jpg" 
+```
+command, which is part of the ImageMagick toolkit. This command removes EXIF data from images, reducing their size and improving load times.
+
+
+  
+
+
