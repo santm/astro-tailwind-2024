@@ -493,6 +493,244 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".mdx"] };
+"2005-04-15-new-pc.mdx": {
+	id: "2005-04-15-new-pc.mdx";
+  slug: "2005-04-15-new-pc";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-17-bonjour.mdx": {
+	id: "2005-05-17-bonjour.mdx";
+  slug: "2005-05-17-bonjour";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-20-vienna-austria.mdx": {
+	id: "2005-05-20-vienna-austria.mdx";
+  slug: "2005-05-20-vienna-austria";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-21-madrid-spain.mdx": {
+	id: "2005-05-21-madrid-spain.mdx";
+  slug: "2005-05-21-madrid-spain";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-22-granada-spain.mdx": {
+	id: "2005-05-22-granada-spain.mdx";
+  slug: "2005-05-22-granada-spain";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-23-alhambra-granada-spain.mdx": {
+	id: "2005-05-23-alhambra-granada-spain.mdx";
+  slug: "2005-05-23-alhambra-granada-spain";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-24-seville-spain.mdx": {
+	id: "2005-05-24-seville-spain.mdx";
+  slug: "2005-05-24-seville-spain";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-25-cordoba-spain.mdx": {
+	id: "2005-05-25-cordoba-spain.mdx";
+  slug: "2005-05-25-cordoba-spain";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-25-evening-in-seville-spain.mdx": {
+	id: "2005-05-25-evening-in-seville-spain.mdx";
+  slug: "2005-05-25-evening-in-seville-spain";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-26-seville-spain.mdx": {
+	id: "2005-05-26-seville-spain.mdx";
+  slug: "2005-05-26-seville-spain";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-28-lisbon-portugal.mdx": {
+	id: "2005-05-28-lisbon-portugal.mdx";
+  slug: "2005-05-28-lisbon-portugal";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-29-hotel-train-lisbon-to-madrid.mdx": {
+	id: "2005-05-29-hotel-train-lisbon-to-madrid.mdx";
+  slug: "2005-05-29-hotel-train-lisbon-to-madrid";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-05-31-lost-pictures-recovered.mdx": {
+	id: "2005-05-31-lost-pictures-recovered.mdx";
+  slug: "2005-05-31-lost-pictures-recovered";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-06-02-back-to-work.mdx": {
+	id: "2005-06-02-back-to-work.mdx";
+  slug: "2005-06-02-back-to-work";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-08-05-how-to-puttygen-puttssh-for-ssh.mdx": {
+	id: "2005-08-05-how-to-puttygen-puttssh-for-ssh.mdx";
+  slug: "2005-08-05-how-to-puttygen-puttssh-for-ssh";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-08-11-banner-with-imagemgick-convert.mdx": {
+	id: "2005-08-11-banner-with-imagemgick-convert.mdx";
+  slug: "2005-08-11-banner-with-imagemgick-convert";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-08-11-ssh-and-scp.mdx": {
+	id: "2005-08-11-ssh-and-scp.mdx";
+  slug: "2005-08-11-ssh-and-scp";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-09-16-new-look-to-web-site.mdx": {
+	id: "2005-09-16-new-look-to-web-site.mdx";
+  slug: "2005-09-16-new-look-to-web-site";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-09-26-running-paris-versailles.mdx": {
+	id: "2005-09-26-running-paris-versailles.mdx";
+  slug: "2005-09-26-running-paris-versailles";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-09-29-gallery2.mdx": {
+	id: "2005-09-29-gallery2.mdx";
+  slug: "2005-09-29-gallery2";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-10-05-french-class.mdx": {
+	id: "2005-10-05-french-class.mdx";
+  slug: "2005-10-05-french-class";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-10-11-migrating-rrd-database-between-different-architecture.mdx": {
+	id: "2005-10-11-migrating-rrd-database-between-different-architecture.mdx";
+  slug: "2005-10-11-migrating-rrd-database-between-different-architecture";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-10-20-tibx-shoe-laces.mdx": {
+	id: "2005-10-20-tibx-shoe-laces.mdx";
+  slug: "2005-10-20-tibx-shoe-laces";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-10-30-place-de-la-concorde.mdx": {
+	id: "2005-10-30-place-de-la-concorde.mdx";
+  slug: "2005-10-30-place-de-la-concorde";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-11-04-part-2.mdx": {
+	id: "2005-11-04-part-2.mdx";
+  slug: "2005-11-04-part-2";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-11-04-photo-album-imagemagick-part-1.mdx": {
+	id: "2005-11-04-photo-album-imagemagick-part-1.mdx";
+  slug: "2005-11-04-photo-album-imagemagick-part-1";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-11-10-diwali-at-paris.mdx": {
+	id: "2005-11-10-diwali-at-paris.mdx";
+  slug: "2005-11-10-diwali-at-paris";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-11-14-orsay-revisited.mdx": {
+	id: "2005-11-14-orsay-revisited.mdx";
+  slug: "2005-11-14-orsay-revisited";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-11-16-reached-10k-and-folding.mdx": {
+	id: "2005-11-16-reached-10k-and-folding.mdx";
+  slug: "2005-11-16-reached-10k-and-folding";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-11-18-create-banner-with-mirror-effect-by-imagemagick.mdx": {
+	id: "2005-11-18-create-banner-with-mirror-effect-by-imagemagick.mdx";
+  slug: "2005-11-18-create-banner-with-mirror-effect-by-imagemagick";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-11-25-create-typewriter-effect-with-ming-php-for-flash-swf-movie.mdx": {
+	id: "2005-11-25-create-typewriter-effect-with-ming-php-for-flash-swf-movie.mdx";
+  slug: "2005-11-25-create-typewriter-effect-with-ming-php-for-flash-swf-movie";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-11-29-metro-in-paris.mdx": {
+	id: "2005-11-29-metro-in-paris.mdx";
+  slug: "2005-11-29-metro-in-paris";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-12-16-thank-god-its-friday.mdx": {
+	id: "2005-12-16-thank-god-its-friday.mdx";
+  slug: "2005-12-16-thank-god-its-friday";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2005-12-28-happy-holidays.mdx": {
+	id: "2005-12-28-happy-holidays.mdx";
+  slug: "2005-12-28-happy-holidays";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
 "2007-01-04-new-gadget-k790i.mdx": {
 	id: "2007-01-04-new-gadget-k790i.mdx";
   slug: "2007-01-04-new-gadget-k790i";

@@ -1,0 +1,18 @@
+---
+title : "photo album : imagemagick (part -1)"
+description : "2005-11-04-photo-album-imagemagick-part-1"
+pubDate : 2005-11-04
+author : "Santanu"
+category : General
+tags : [ "imagemagick", "thumbnail", "csh", "tech notes", "album",]
+image : {'src': '', 'alt': ''}
+---
+
+
+Quick and dirty way of creating photo album with imagemagick, creating
+
+images with black border as it looks good for all
+
+
+
+    #!/bin/cshset files = `echo [0-9]*.jpg`echo $filesforeach file ( $files )set w = `identify -format  "%w" $file`set h = `identify -format  "%h" $file`if ($w > $h) then  convert $file -thumbnail 500X -bordercolor black -border 1 /tmp/foo100/$fileelse  convert $file -thumbnail X500 -bordercolor black -border 1 /tmp/foo100/$fileendifend

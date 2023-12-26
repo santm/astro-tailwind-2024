@@ -1,0 +1,76 @@
+---
+title : "Gallery2"
+description : "2005-09-29-gallery2"
+pubDate : 2005-09-29
+author : "Santanu"
+category : General
+tags : [ "picture", "tech notes",]
+image : {'src': '', 'alt': ''}
+---
+Well I am having lots of trouble with a simple gallery2 installation
+
+with 15 pictures for my wife's hobby pictures. While I am running a 1600
+
+picture gallery on the same server with out any problem touch wood. The
+
+back on the main one not there.  
+
+  
+
+And i am having wonderful tech support from dot5 hosting to say the
+
+least. The guy does not even know what is Unix he replies it is
+
+FreeBSD.  
+
+  
+
+A quick a dirty way to get around. Let's name the site as www.mysite.com
+
+Here the user name for your web server is not same as your account. So
+
+when you create a file ftp you see the owner/group as "joe/joe" and when
+
+web server creates it it is "web/web".  
+
+  
+
+Connect via ftp create a gallery2 directory ; chmod 777 the same on the
+
+Top most Document root.  
+
+put this file in the same directory "gallery-2.0-full.tar.gz" make sure
+
+binary more  
+
+also FTP this php file foobar.php with these lines in it  
+
+
+
+&lt;?  
+
+system ("tar -zxvf gallery-2.0-full.tar.gz") ;  
+
+?&gt;  
+
+
+
+Now connect to this foobar.php via a web browser.  
+
+  
+
+Follow the instruction from gallery2 installation when you point your
+
+browser to this location  
+
+  
+
+http://www.mysite.com/gallery2/  
+
+  
+
+Need to create the g2data directory and chmod 777 via ftp again .  
+
+  
+
+to finish the same Gallery will ask you chmod 755 gallery2 directory.
