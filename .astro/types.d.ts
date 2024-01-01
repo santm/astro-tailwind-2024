@@ -165,11 +165,11 @@ declare module 'astro:content' {
 			? {
 					collection: C;
 					slug: ValidContentEntrySlug<C>;
-			  }
+				}
 			: {
 					collection: C;
 					id: keyof DataEntryMap[C];
-			  }
+				}
 	>;
 	// Allow generic `string` to avoid excessive type errors in the config
 	// if `dev` is not running to update as you edit.
@@ -727,6 +727,377 @@ declare module 'astro:content' {
 "2005-12-28-happy-holidays.mdx": {
 	id: "2005-12-28-happy-holidays.mdx";
   slug: "2005-12-28-happy-holidays";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-01-15-home-network-adsl-network-phone.mdx": {
+	id: "2006-01-15-home-network-adsl-network-phone.mdx";
+  slug: "2006-01-15-home-network-adsl-network-phone";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-01-17-joy-of-baking.mdx": {
+	id: "2006-01-17-joy-of-baking.mdx";
+  slug: "2006-01-17-joy-of-baking";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-02-05-french-classes-came-to-an-end.mdx": {
+	id: "2006-02-05-french-classes-came-to-an-end.mdx";
+  slug: "2006-02-05-french-classes-came-to-an-end";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-02-16-vacation-on-the-horizon.mdx": {
+	id: "2006-02-16-vacation-on-the-horizon.mdx";
+  slug: "2006-02-16-vacation-on-the-horizon";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-03-06-tujh-bin.mdx": {
+	id: "2006-03-06-tujh-bin.mdx";
+  slug: "2006-03-06-tujh-bin";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-03-15-changing-face-of-india.mdx": {
+	id: "2006-03-15-changing-face-of-india.mdx";
+  slug: "2006-03-15-changing-face-of-india";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-04-20-back-to-mordor.mdx": {
+	id: "2006-04-20-back-to-mordor.mdx";
+  slug: "2006-04-20-back-to-mordor";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-04-25-changing-face-of-india.mdx": {
+	id: "2006-04-25-changing-face-of-india.mdx";
+  slug: "2006-04-25-changing-face-of-india";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-05-04-add-new-administrator-and-management-post-for-smartdashboard-firewall-1.mdx": {
+	id: "2006-05-04-add-new-administrator-and-management-post-for-smartdashboard-firewall-1.mdx";
+  slug: "2006-05-04-add-new-administrator-and-management-post-for-smartdashboard-firewall-1";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-05-04-envy-me-if-you-can.mdx": {
+	id: "2006-05-04-envy-me-if-you-can.mdx";
+  slug: "2006-05-04-envy-me-if-you-can";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-05-10-deja-vu.mdx": {
+	id: "2006-05-10-deja-vu.mdx";
+  slug: "2006-05-10-deja-vu";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-05-12-friday-12th-may.mdx": {
+	id: "2006-05-12-friday-12th-may.mdx";
+  slug: "2006-05-12-friday-12th-may";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-05-18-load-cpu-memory-shell-script-c-program-for-quick-and-dirty-benchmark.mdx": {
+	id: "2006-05-18-load-cpu-memory-shell-script-c-program-for-quick-and-dirty-benchmark.mdx";
+  slug: "2006-05-18-load-cpu-memory-shell-script-c-program-for-quick-and-dirty-benchmark";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-05-21-sikkim-gangtok.mdx": {
+	id: "2006-05-21-sikkim-gangtok.mdx";
+  slug: "2006-05-21-sikkim-gangtok";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-05-22-uddan-flight.mdx": {
+	id: "2006-05-22-uddan-flight.mdx";
+  slug: "2006-05-22-uddan-flight";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-05-23-bike-route.mdx": {
+	id: "2006-05-23-bike-route.mdx";
+  slug: "2006-05-23-bike-route";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-06-04-le-marche.mdx": {
+	id: "2006-06-04-le-marche.mdx";
+  slug: "2006-06-04-le-marche";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-06-27-uncertain-voyage.mdx": {
+	id: "2006-06-27-uncertain-voyage.mdx";
+  slug: "2006-06-27-uncertain-voyage";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-02-cest-fou.mdx": {
+	id: "2006-07-02-cest-fou.mdx";
+  slug: "2006-07-02-cest-fou";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-12-cest-fou-part-ii.mdx": {
+	id: "2006-07-12-cest-fou-part-ii.mdx";
+  slug: "2006-07-12-cest-fou-part-ii";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-15-lausanne-18th-june.mdx": {
+	id: "2006-07-15-lausanne-18th-june.mdx";
+  slug: "2006-07-15-lausanne-18th-june";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-15-post-bus-19th-june.mdx": {
+	id: "2006-07-15-post-bus-19th-june.mdx";
+  slug: "2006-07-15-post-bus-19th-june";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-15-rescued-19th-june.mdx": {
+	id: "2006-07-15-rescued-19th-june.mdx";
+  slug: "2006-07-15-rescued-19th-june";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-16-glacier-express-20th-june.mdx": {
+	id: "2006-07-16-glacier-express-20th-june.mdx";
+  slug: "2006-07-16-glacier-express-20th-june";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-16-hiking-mt-rigi-22nd-june.mdx": {
+	id: "2006-07-16-hiking-mt-rigi-22nd-june.mdx";
+  slug: "2006-07-16-hiking-mt-rigi-22nd-june";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-16-mount-jungfraujoch-23rd-june.mdx": {
+	id: "2006-07-16-mount-jungfraujoch-23rd-june.mdx";
+  slug: "2006-07-16-mount-jungfraujoch-23rd-june";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-16-mount-titlis-21st-june.mdx": {
+	id: "2006-07-16-mount-titlis-21st-june.mdx";
+  slug: "2006-07-16-mount-titlis-21st-june";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-16-relaxing-day-24th-june.mdx": {
+	id: "2006-07-16-relaxing-day-24th-june.mdx";
+  slug: "2006-07-16-relaxing-day-24th-june";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-18-golden-pass-montreux.mdx": {
+	id: "2006-07-18-golden-pass-montreux.mdx";
+  slug: "2006-07-18-golden-pass-montreux";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-19-a-must-list-for-swiss.mdx": {
+	id: "2006-07-19-a-must-list-for-swiss.mdx";
+  slug: "2006-07-19-a-must-list-for-swiss";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-19-shhh-silence-please.mdx": {
+	id: "2006-07-19-shhh-silence-please.mdx";
+  slug: "2006-07-19-shhh-silence-please";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-26-yum.mdx": {
+	id: "2006-07-26-yum.mdx";
+  slug: "2006-07-26-yum";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-30-green-plate.mdx": {
+	id: "2006-07-30-green-plate.mdx";
+  slug: "2006-07-30-green-plate";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-31-baking-bread.mdx": {
+	id: "2006-07-31-baking-bread.mdx";
+  slug: "2006-07-31-baking-bread";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-07-31-taste-of-india-swiss.mdx": {
+	id: "2006-07-31-taste-of-india-swiss.mdx";
+  slug: "2006-07-31-taste-of-india-swiss";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-08-01-italian-aroma.mdx": {
+	id: "2006-08-01-italian-aroma.mdx";
+  slug: "2006-08-01-italian-aroma";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-08-04-swiss-itenary-tgv-and-gizmo.mdx": {
+	id: "2006-08-04-swiss-itenary-tgv-and-gizmo.mdx";
+  slug: "2006-08-04-swiss-itenary-tgv-and-gizmo";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-08-11-last-week.mdx": {
+	id: "2006-08-11-last-week.mdx";
+  slug: "2006-08-11-last-week";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-08-12-pardey-key-pichey.mdx": {
+	id: "2006-08-12-pardey-key-pichey.mdx";
+  slug: "2006-08-12-pardey-key-pichey";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-08-28-door-code.mdx": {
+	id: "2006-08-28-door-code.mdx";
+  slug: "2006-08-28-door-code";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-08-28-making-of-chocolate-charlotte.mdx": {
+	id: "2006-08-28-making-of-chocolate-charlotte.mdx";
+  slug: "2006-08-28-making-of-chocolate-charlotte";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-08-30-last-days-in-paris.mdx": {
+	id: "2006-08-30-last-days-in-paris.mdx";
+  slug: "2006-08-30-last-days-in-paris";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-08-31-souvenir.mdx": {
+	id: "2006-08-31-souvenir.mdx";
+  slug: "2006-08-31-souvenir";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-09-04-le-vol.mdx": {
+	id: "2006-09-04-le-vol.mdx";
+  slug: "2006-09-04-le-vol";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-09-30-few-books.mdx": {
+	id: "2006-09-30-few-books.mdx";
+  slug: "2006-09-30-few-books";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-10-10-aids-awareness-paris.mdx": {
+	id: "2006-10-10-aids-awareness-paris.mdx";
+  slug: "2006-10-10-aids-awareness-paris";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-10-16-back-to-work.mdx": {
+	id: "2006-10-16-back-to-work.mdx";
+  slug: "2006-10-16-back-to-work";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-10-23-durga-puja.mdx": {
+	id: "2006-10-23-durga-puja.mdx";
+  slug: "2006-10-23-durga-puja";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-10-30-lunch-time.mdx": {
+	id: "2006-10-30-lunch-time.mdx";
+  slug: "2006-10-30-lunch-time";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-11-28-local-trains-of-mumbai.mdx": {
+	id: "2006-11-28-local-trains-of-mumbai.mdx";
+  slug: "2006-11-28-local-trains-of-mumbai";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-12-04-linen-anniversary.mdx": {
+	id: "2006-12-04-linen-anniversary.mdx";
+  slug: "2006-12-04-linen-anniversary";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-12-23-indian-newspapers.mdx": {
+	id: "2006-12-23-indian-newspapers.mdx";
+  slug: "2006-12-23-indian-newspapers";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".mdx"] };
+"2006-12-31-welcoming-2007.mdx": {
+	id: "2006-12-31-welcoming-2007.mdx";
+  slug: "2006-12-31-welcoming-2007";
   body: string;
   collection: "blog";
   data: any
