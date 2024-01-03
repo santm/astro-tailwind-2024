@@ -1,7 +1,5 @@
 ---
 import { Image } from 'astro:assets';
-// import defaultThumbnail from "https://ik.imagekit.io/santm/rose-large_zgSiv4dBc.webp";
-// import BlogTeaser from '../components/Blogteaser.astro';
 import BaseLayout from './BaseLayout.astro';
 const { title, tags, description, pubDate, author, image } = Astro.props;
 const isImageSrcNotBlank = image && image.src && image.src.trim() !== '';
@@ -48,7 +46,7 @@ const formatMonth = (date: string | number | Date) => {
   return `${day}${daySuffix} ${month}`;
     };
 ---
-<BaseLayout pageTitle={title}>
+<BaseLayout content={{ title, description }}>
 
         <div>
           <div id="author_block" class="flex my-6 justify-between">

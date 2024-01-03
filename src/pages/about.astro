@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "About";
+const title = "About";
+let description = 'An about page for this website';
 import AboutSection from "../components/AboutSection.astro";
 ---
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout content={{ title, description }}>
   <AboutSection />
 </BaseLayout>

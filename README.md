@@ -1,0 +1,12 @@
+- SEO
+- RSS
+- Dark & Light mode support
+- All blog hero image - local
+    - Asset 
+    - Collection
+    - Data Sheets
+- Year wise listing better sidebar 
+- Search Pagefind 
+- Favicons 
+- site.webmanifest 
+- Astro Transition 
