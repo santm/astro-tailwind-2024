@@ -28,8 +28,8 @@ const blogCollection = defineCollection({
     description: z.string().max(160, "For best SEO results, please keep the description under 160 characters.").optional(),
     tags: z.array(z.string()),
     category: z.enum(["Travel", "Poem", "Technology", "General", "Food", "Running"]),
-    cover: image().refine((img) => img.width >= 1080, {
-      message: "Cover image must be at least 1080 pixels wide!",
+    cover: image().refine((img) => img.width >= 999, {
+      message: "Cover image must be at least 999 pixels wide!",
     }),
     coverAlt: z.string(),
   }),

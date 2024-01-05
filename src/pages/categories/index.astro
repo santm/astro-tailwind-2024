@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const pageTitle = "Categories of this blog";
+const title = "Categories of this blog";
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("blog");
 const categories = [...new Set([].concat.apply([], allPosts.flatMap(post => post.data.category)))]
@@ -11,9 +11,9 @@ allPosts.forEach(post => {
   categoryPostCount[category] = (categoryPostCount[category] || 0) + 1;
 });
 ---
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout content={{ title }}>
     <div data-pagefind-ignore>
-        <h1 class="text-balance pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{pageTitle}</h1>
+        <h1 class="text-balance pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{title}</h1>
         <p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">The blog posts are mostly divided in these broad section</p>
         <ul class="tag-list">
             {categories.flatMap((category) => (

@@ -1,7 +1,7 @@
 ---
-//import { Img } from "astro-imagetools/components";
-//import { Image } from 'astro:assets';
-const { title, link, img_src, alt, description, category, pubDate,hasImageImport,firstImagePath } = Astro.props;
+import { Image } from 'astro:assets';
+const { title, link, cover, coverAlt, description, category, pubDate } = Astro.props;
+//const { title, tags, description, pubDate, author, cover, coverAlt } = Astro.props;
 const originalDate = new Date(pubDate);
 // Define options for formatting
 const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' };
@@ -13,7 +13,7 @@ const formattedDate = originalDate.toLocaleString('en-US', options);
 <!-- Card -->
   <div class="group flex flex-col h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href={link}>
-      {
+      <!-- {
         img_src ? (
           <img class="rounded-t-lg" src={img_src} alt={alt} />
         ) : hasImageImport ? (
@@ -21,8 +21,8 @@ const formattedDate = originalDate.toLocaleString('en-US', options);
         ) : (
           <img class="rounded-t-lg" src="https://ik.imagekit.io/santm/rose-large_zgSiv4dBc.webp" alt="Default Alt Text" />
         )
-      }
-        
+      } -->
+      <Image src={cover} alt={ coverAlt ? `${coverAlt}` : `generic alt text` } />
           
     </a>
     <div class="p-4 md:p-6">

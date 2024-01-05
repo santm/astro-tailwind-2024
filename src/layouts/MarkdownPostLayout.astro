@@ -88,36 +88,17 @@ const formatMonth = (date: string | number | Date) => {
                     </>
                   )}
                 </div> <!-- tags end -->
-                <Image src={cover} alt={coverAlt} />
-                <!-- {isImageSrcNotBlank ? (
-                  <>
-                    <Image
-                      src={image.src}
-                      class="border-2 border-gray-600 my-4"
-                      alt={image.alt}
-                      loading="lazy"
-                      width="1600"
-                      height="900"
-                    />
-                  </>
-                ) : (
-                  image.src.startsWith('http') && (
-                    <img
-                      src={image.src}
-                      class="border-2 santm border-gray-600 my-4"
-                      alt={image.alt}
-                      loading="lazy"
-                    />
-                  )
-                )}
-                    -->
+                <!-- <Image src={cover} alt={coverAlt} /> -->
+                <Image
+  src={cover}
+  widths={[240, 540, 720, cover.width]}
+  sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${cover.width}px`}
+  alt={ coverAlt ? `${coverAlt}` : `A description of cover image.` }
+  class="shadow-xl dark:shadow-gray-800 m-4 md:m-8"
+/>
+
                   <article class="text-pretty prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none text-justify tracking-wide"><slot /></article> 
           
         </div>
 
 </BaseLayout>
-<style>
-	[data-my-image] {
-		border: 1px solid red;
-	}
-</style>

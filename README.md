@@ -9,4 +9,4 @@
 - Search Pagefind 
 - Favicons 
 - site.webmanifest 
-- Astro Transition 
+- Astro Transition -- break my implementation of dark/light beeds to 

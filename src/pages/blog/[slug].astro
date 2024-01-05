@@ -23,7 +23,7 @@ const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
 <MarkdownPostLayout {...post.data}>
   <Content />
   <time datetime={lastModified} class="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500">
-	<span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
+	<span class="h-4 w-0.5 rounded-full bg-zinc-900 dark:bg-zinc-100"></span>
 	<span class="ml-3">Last Modified: {lastModified}</span>
   </time>
 </MarkdownPostLayout>

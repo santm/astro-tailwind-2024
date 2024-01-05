@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 interface TimelineItem {
   date: string;
   title: string;
@@ -9,56 +10,10 @@ interface TimelineItem {
 import jsonData from "../assets/data/about_timeline.json";
 
 const jsonDataTyped: TimelineItem[] = jsonData;
-//const pathsData = jsonDataTyped[0].paths; // Accessing paths of the first item, adjust as needed
 
-//const pathsData = jsonData.paths;
-import { getImage } from "astro:assets";
 import aarushAvatarPath from "../assets/avatars/aarush_profile.webp";
 import pamelaAvatarPath from "../assets/avatars/pamela_profile.webp";
 import santanuAvatarPath from "../assets/avatars/santanu_profile.webp";
-
-interface ImageMetadata {
-  key: string;
-  srcSet: string;
-  src: string;
-  sizes: string;
-  class: string;
-  alt: string;
-}
-
-interface Avatars {
-  [avatarName: string]: ImageMetadata;
-}
-
-const avatars: Avatars = {
-  aarush: { src: aarushAvatarPath },
-  pamela: { src: pamelaAvatarPath },
-  santanu: { src: santanuAvatarPath },
-};
-// santm this TS error also could not fixed
-const imageSizes = [320, 427, 533, 640];
-
-interface ImageSources {
-  [size: number]: string;
-}
-
-const getImageSources = async (avatarPath: string): Promise<ImageSources> => {
-  const imageSources: ImageSources = {};
-  for (const size of imageSizes) {
-    const avatarImage = await getImage({ src: avatarPath, width: size });
-    imageSources[size] = avatarImage.src;
-  }
-  return imageSources;
-};
-
-const avatarImageSources: Record<string, ImageSources> = {};
-
-for (const avatarName in avatars) {
-  if (avatars.hasOwnProperty(avatarName)) {
-    const avatarPath = avatars[avatarName].src; // Accessing 'src' property directly
-    avatarImageSources[avatarName] = await getImageSources(avatarPath);
-  }
-}
 
 // Use avatarImageSources object as needed to access specific avatar images and sizes
 ---
@@ -69,24 +24,42 @@ for (const avatarName in avatars) {
 </p>
 <!-- grid start-->
 <div class="grid items-center gap-12 md:grid-cols-3 pt-4">
-  {
-    Object.entries(avatarImageSources).map(([avatarName, sources]) => (
-      <div class="space-y-4 text-center">
-        <img
-          key={avatarName}
-          srcSet={`${sources[320]} 320w, ${sources[427]} 427w, ${sources[533]} 533w, ${sources[640]} 640w`}
-          src={sources[640]}
-          sizes="(max-width: 768px) 640px, (max-width: 1024px) 427px, (max-width: 1280px) 533px, 640px"
-          class="mx-auto h-64 w-64 rounded-xl object-cover md:h-64 md:w-48 lg:h-80 lg:w-64"
-          alt={avatarName}
-          loading="lazy"
-        />
-        <div>
-          <h4 class="text-balance capitalize text-2xl text-gray-700 dark:text-white">{avatarName}</h4>
-        </div>
-      </div>
-    ))
-  }
+  <div class="space-y-4 text-center">
+    <Image
+      src={aarushAvatarPath}
+      widths={[240, 540, 720, aarushAvatarPath.width]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${aarushAvatarPath.width}px`}
+      alt={'Aarush'}
+      class="rounded-lg shadow-xl dark:shadow-gray-800 m-4 md:m-8"
+    />
+    <div>
+      <h4 class="text-balance capitalize text-2xl text-gray-700 dark:text-white">Aarush</h4>
+    </div>
+  </div>
+  <div class="space-y-4 text-center">
+    <Image
+      src={pamelaAvatarPath}
+      widths={[240, 540, 720, pamelaAvatarPath.width]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${pamelaAvatarPath.width}px`}
+      alt={'Pamela'}
+      class="rounded-lg shadow-xl dark:shadow-gray-800 m-4 md:m-8"
+    />
+    <div>
+      <h4 class="text-balance capitalize text-2xl text-gray-700 dark:text-white">Pamela</h4>
+    </div>
+  </div>
+  <div class="space-y-4 text-center">
+    <Image
+      src={santanuAvatarPath}
+      widths={[240, 540, 720, santanuAvatarPath.width]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${santanuAvatarPath.width}px`}
+      alt={'Santanu'}
+      class="rounded-lg shadow-xl dark:shadow-gray-800 m-4 md:m-8"
+    />
+    <div>
+      <h4 class="text-balance capitalize text-2xl text-gray-700 dark:text-white">Aarush</h4>
+    </div>
+  </div>
 </div>
 <!-- grid end -->
 <!-- TimeLine -->

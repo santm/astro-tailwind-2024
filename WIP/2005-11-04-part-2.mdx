@@ -1,0 +1,116 @@
+---
+author: Santanu
+category: General
+cover: ''
+coverAlt: ''
+description: 2005-11-04-part-2
+pubDate: 2005-11-04
+tags:
+- reading
+- tech notes
+title: Part -2
+---
+
+create individual pages for each image dirty way with php  
+
+```<?php
+
+//$image_files=[];
+$type = "jpg";
+$abspath_folder = "/home/santm/public_html/PamelasCreation/images";
+
+if (is_dir($abspath_folder)) {
+    if ($handle = opendir($abspath_folder)) {
+        while (false !== ($file = readdir($handle))) {
+            if ($file != '.' && $file != '..' && $file != 'CVS' && $file != 'index.html') {
+                $the_array[] = $file;
+            }
+        }
+    }
+    closedir($handle);
+}
+
+// end of reading the directory
+
+// santm print_r($the_array);
+
+// making sure the array only has our jpg image starting with a number
+
+foreach ($the_array as $img) {
+    if (!is_dir($abspath_folder . '/' . $img)) {
+        if (eregi($type, $img) && eregi("^[0-9]", $img)) {
+            $the_image[] = $img;
+        }
+    }
+}
+
+// the main part
+
+if (!$the_image) {
+    echo "no image \n";
+} else {
+    $i = count($the_image);
+    echo "count $i\n";
+
+    // sort the array
+    rsort($the_image);
+
+    //print_r($the_image );
+
+    for ($k = 0; $k < $i; $k++) {
+        $bb = $k + 1;
+        echo "santm $the_image[$k] \n";
+        $full_name = explode(".", $the_image[$k]);
+        $short_name = $full_name[0];
+        $foo_img = 'images/' . $short_name;
+
+        if ($k != 0) {
+            $pre_name = explode(".", $the_image[$k - 1]);
+            $pre_short_name = $pre_name[0];
+        }
+
+        if ($bb != $i) {
+            $next_name = explode(".", $the_image[$k + 1]);
+            $next_short_name = $next_name[0];
+        }
+
+        echo " short $short_name \n";
+
+        // doing dirty way with system call for placing the header
+
+        $head_out = shell_exec('cat /home/santm/head.pam.inc');
+        $write_handle = fopen("/home/santm/public_html/PamelasCreation/$short_name.html", "w+");
+        fwrite($write_handle, $head_out);
+
+        fwrite($write_handle, "
+$bb of $i
+\\n
+<div class= \"big_photo\">\\n
+\\n");
+
+        if ($pre_short_name) {
+            fwrite($write_handle, "
+<img src=\"images/previous.gif\" alt=\"next\" border=\"0\">\\n");
+        }
+
+        if ((!$pre_short_name) || (!$next_short_name)) {
+            fwrite($write_handle, "
+<a href=\"index.html\" width=\"90%\">\\n");
+        } else {
+            fwrite($write_handle, "
+<img src=\"images/home.gif\" alt=\"home\" border=\"0\">\\n");
+        }
+
+        if ($next_short_name) {
+            fwrite($write_handle, "
+   \\n");
+        }
+
+        fwrite($write_handle, "\\n");
+        fwrite($write_handle, "\\n");
+        fclose($write_handle);
+    }
+}
+
+?>
+```
