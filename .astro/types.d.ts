@@ -388,6 +388,300 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"2018-05-18-north-east-2018-planning.mdx": {
+	id: "2018-05-18-north-east-2018-planning.mdx";
+  slug: "2018-05-18-north-east-2018-planning";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-05-19-day-1-maa-kamakhya-here-we-come.mdx": {
+	id: "2018-05-19-day-1-maa-kamakhya-here-we-come.mdx";
+  slug: "2018-05-19-day-1-maa-kamakhya-here-we-come";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-05-21-day-2-shillong.mdx": {
+	id: "2018-05-21-day-2-shillong.mdx";
+  slug: "2018-05-21-day-2-shillong";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-05-22-day-3-long-day-long-drive-crazy-one-meghalaya.mdx": {
+	id: "2018-05-22-day-3-long-day-long-drive-crazy-one-meghalaya.mdx";
+  slug: "2018-05-22-day-3-long-day-long-drive-crazy-one-meghalaya";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-05-23-tiring-yet-happy-day-double-decker-root-bridge.mdx": {
+	id: "2018-05-23-tiring-yet-happy-day-double-decker-root-bridge.mdx";
+  slug: "2018-05-23-tiring-yet-happy-day-double-decker-root-bridge";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-05-24-sight-seeing-sohra-cherrapunjee.mdx": {
+	id: "2018-05-24-sight-seeing-sohra-cherrapunjee.mdx";
+  slug: "2018-05-24-sight-seeing-sohra-cherrapunjee";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-05-25-day-1-in-kaziranga-april-2018.mdx": {
+	id: "2018-05-25-day-1-in-kaziranga-april-2018.mdx";
+  slug: "2018-05-25-day-1-in-kaziranga-april-2018";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-05-26-second-day-in-kaziranga-april-2018.mdx": {
+	id: "2018-05-26-second-day-in-kaziranga-april-2018.mdx";
+  slug: "2018-05-26-second-day-in-kaziranga-april-2018";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-05-27-kaziranga-information-you-need-to-know-before-visiting.mdx": {
+	id: "2018-05-27-kaziranga-information-you-need-to-know-before-visiting.mdx";
+  slug: "2018-05-27-kaziranga-information-you-need-to-know-before-visiting";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-06-03-a-morning-at-hoollongapar-gibbon-sanctuary.mdx": {
+	id: "2018-06-03-a-morning-at-hoollongapar-gibbon-sanctuary.mdx";
+  slug: "2018-06-03-a-morning-at-hoollongapar-gibbon-sanctuary";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-06-04-gibbon-wildlife-things-to-know-before-vising.mdx": {
+	id: "2018-06-04-gibbon-wildlife-things-to-know-before-vising.mdx";
+  slug: "2018-06-04-gibbon-wildlife-things-to-know-before-vising";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-06-05-sivasagar-unexplored-ahom-kingdoms-finest.mdx": {
+	id: "2018-06-05-sivasagar-unexplored-ahom-kingdoms-finest.mdx";
+  slug: "2018-06-05-sivasagar-unexplored-ahom-kingdoms-finest";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-06-20-majuli-day-1-april-2018.mdx": {
+	id: "2018-06-20-majuli-day-1-april-2018.mdx";
+  slug: "2018-06-20-majuli-day-1-april-2018";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-06-21-majuli-day-2-april-2018.mdx": {
+	id: "2018-06-21-majuli-day-2-april-2018.mdx";
+  slug: "2018-06-21-majuli-day-2-april-2018";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-06-22-majuli-day-3-april-2018.mdx": {
+	id: "2018-06-22-majuli-day-3-april-2018.mdx";
+  slug: "2018-06-22-majuli-day-3-april-2018";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2018-10-16-kerala-2018-thekkady-and-thattekad.mdx": {
+	id: "2018-10-16-kerala-2018-thekkady-and-thattekad.mdx";
+  slug: "2018-10-16-kerala-2018-thekkady-and-thattekad";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2020-04-01-Bats-by-Aarush.mdx": {
+	id: "2020-04-01-Bats-by-Aarush.mdx";
+  slug: "2020-04-01-bats-by-aarush";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2020-04-01-Chamleon-by-Aarush.mdx": {
+	id: "2020-04-01-Chamleon-by-Aarush.mdx";
+  slug: "2020-04-01-chamleon-by-aarush";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2020-04-01-Falcon-by-Aarush.mdx": {
+	id: "2020-04-01-Falcon-by-Aarush.mdx";
+  slug: "2020-04-01-falcon-by-aarush";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2020-04-09-a-paradise-poem.mdx": {
+	id: "2020-04-09-a-paradise-poem.mdx";
+  slug: "2020-04-09-a-paradise-poem";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2020-04-11-jungle-poem.mdx": {
+	id: "2020-04-11-jungle-poem.mdx";
+  slug: "2020-04-11-jungle-poem";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2020-08-17-Independence-Day-poem.mdx": {
+	id: "2020-08-17-Independence-Day-poem.mdx";
+  slug: "2020-08-17-independence-day-poem";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-01-03-my-grandmother-house.mdx": {
+	id: "2021-01-03-my-grandmother-house.mdx";
+  slug: "2021-01-03-my-grandmother-house";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-01-17-Birding-at-Durg.mdx": {
+	id: "2021-01-17-Birding-at-Durg.mdx";
+  slug: "2021-01-17-birding-at-durg";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-02-22-Drive-Bangalore-2-Durg.mdx": {
+	id: "2021-02-22-Drive-Bangalore-2-Durg.mdx";
+  slug: "2021-02-22-drive-bangalore-2-durg";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-02-22-Onakona-Chhattisgarh.mdx": {
+	id: "2021-02-22-Onakona-Chhattisgarh.mdx";
+  slug: "2021-02-22-onakona-chhattisgarh";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-06-23-My-Sourdough-Journey-in-lockdown.mdx": {
+	id: "2021-06-23-My-Sourdough-Journey-in-lockdown.mdx";
+  slug: "2021-06-23-my-sourdough-journey-in-lockdown";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-06-24-My-Baking-Tins-and-Pots.mdx": {
+	id: "2021-06-24-My-Baking-Tins-and-Pots.mdx";
+  slug: "2021-06-24-my-baking-tins-and-pots";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-06-24-My-Sourdough-Tools.mdx": {
+	id: "2021-06-24-My-Sourdough-Tools.mdx";
+  slug: "2021-06-24-my-sourdough-tools";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-08-31-Puducherry.mdx": {
+	id: "2021-08-31-Puducherry.mdx";
+  slug: "2021-08-31-puducherry";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-09-29-Udupi.mdx": {
+	id: "2021-09-29-Udupi.mdx";
+  slug: "2021-09-29-udupi";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-10-22-Poem-Humanity.mdx": {
+	id: "2021-10-22-Poem-Humanity.mdx";
+  slug: "2021-10-22-poem-humanity";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-10-25-Plan-for-Udaipur.mdx": {
+	id: "2021-10-25-Plan-for-Udaipur.mdx";
+  slug: "2021-10-25-plan-for-udaipur";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-10-26-Jawai-Bera-land-of-Leopard.mdx": {
+	id: "2021-10-26-Jawai-Bera-land-of-Leopard.mdx";
+  slug: "2021-10-26-jawai-bera-land-of-leopard";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-10-27-Ranakpur.mdx": {
+	id: "2021-10-27-Ranakpur.mdx";
+  slug: "2021-10-27-ranakpur";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2021-11-11-sandakphu-trek.mdx": {
+	id: "2021-11-11-sandakphu-trek.mdx";
+  slug: "2021-11-11-sandakphu-trek";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2022-04-11-Day-1-Kashmir.mdx": {
+	id: "2022-04-11-Day-1-Kashmir.mdx";
+  slug: "2022-04-11-day-1-kashmir";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2022-04-12-Day-2-Kashmir.mdx": {
+	id: "2022-04-12-Day-2-Kashmir.mdx";
+  slug: "2022-04-12-day-2-kashmir";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2022-04-13-Day-3-Kashmir.mdx": {
+	id: "2022-04-13-Day-3-Kashmir.mdx";
+  slug: "2022-04-13-day-3-kashmir";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2022-04-14-Day-4-Kashmir.mdx": {
+	id: "2022-04-14-Day-4-Kashmir.mdx";
+  slug: "2022-04-14-day-4-kashmir";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2022-04-15-Day-5-Kashmir.mdx": {
+	id: "2022-04-15-Day-5-Kashmir.mdx";
+  slug: "2022-04-15-day-5-kashmir";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2022-04-16-Day-6-Kashmir.mdx": {
+	id: "2022-04-16-Day-6-Kashmir.mdx";
+  slug: "2022-04-16-day-6-kashmir";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "2023-01-26-poem-ballad_of_the_soldier.mdx": {
 	id: "2023-01-26-poem-ballad_of_the_soldier.mdx";
   slug: "2023-01-26-poem-ballad_of_the_soldier";
