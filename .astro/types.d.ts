@@ -388,6 +388,167 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"2014-03-29-tanflora-our-own-keukenhof-around-bangalore.mdx": {
+	id: "2014-03-29-tanflora-our-own-keukenhof-around-bangalore.mdx";
+  slug: "2014-03-29-tanflora-our-own-keukenhof-around-bangalore";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-04-26-driving-himachal.mdx": {
+	id: "2014-04-26-driving-himachal.mdx";
+  slug: "2014-04-26-driving-himachal";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-04-29-pacemakers.mdx": {
+	id: "2014-04-29-pacemakers.mdx";
+  slug: "2014-04-29-pacemakers";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-05-12-wow-what-a-coincidence.mdx": {
+	id: "2014-05-12-wow-what-a-coincidence.mdx";
+  slug: "2014-05-12-wow-what-a-coincidence";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-06-19-facebook-down-june-19th-2014.mdx": {
+	id: "2014-06-19-facebook-down-june-19th-2014.mdx";
+  slug: "2014-06-19-facebook-down-june-19th-2014";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-07-03-drhm-chennai-2014.mdx": {
+	id: "2014-07-03-drhm-chennai-2014.mdx";
+  slug: "2014-07-03-drhm-chennai-2014";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-07-17-indian-mobile-scene-and-future.mdx": {
+	id: "2014-07-17-indian-mobile-scene-and-future.mdx";
+  slug: "2014-07-17-indian-mobile-scene-and-future";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-07-21-instant-coffee-bundt-cake.mdx": {
+	id: "2014-07-21-instant-coffee-bundt-cake.mdx";
+  slug: "2014-07-21-instant-coffee-bundt-cake";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-09-02-airtel-hyderabad-half-marathon-2014.mdx": {
+	id: "2014-09-02-airtel-hyderabad-half-marathon-2014.mdx";
+  slug: "2014-09-02-airtel-hyderabad-half-marathon-2014";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-12-03-sharat-when-rains-give-way-to-the-early-autumn-with-blue-skies-mid-august-to-mid-october.mdx": {
+	id: "2014-12-03-sharat-when-rains-give-way-to-the-early-autumn-with-blue-skies-mid-august-to-mid-october.mdx";
+  slug: "2014-12-03-sharat-when-rains-give-way-to-the-early-autumn-with-blue-skies-mid-august-to-mid-october";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-12-07-what-a-saturday.mdx": {
+	id: "2014-12-07-what-a-saturday.mdx";
+  slug: "2014-12-07-what-a-saturday";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2014-12-17-happy-baking-happy-holidays.mdx": {
+	id: "2014-12-17-happy-baking-happy-holidays.mdx";
+  slug: "2014-12-17-happy-baking-happy-holidays";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2015-06-08-half-early-update.mdx": {
+	id: "2015-06-08-half-early-update.mdx";
+  slug: "2015-06-08-half-early-update";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2015-08-26-gujarat-2011-map.mdx": {
+	id: "2015-08-26-gujarat-2011-map.mdx";
+  slug: "2015-08-26-gujarat-2011-map";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2015-08-31-43-seconds-and-counting.mdx": {
+	id: "2015-08-31-43-seconds-and-counting.mdx";
+  slug: "2015-08-31-43-seconds-and-counting";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2015-09-23-satara-hm-2015.mdx": {
+	id: "2015-09-23-satara-hm-2015.mdx";
+  slug: "2015-09-23-satara-hm-2015";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2015-11-25-cochin-full-marathon-2015.mdx": {
+	id: "2015-11-25-cochin-full-marathon-2015.mdx";
+  slug: "2015-11-25-cochin-full-marathon-2015";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2016-01-13-2016-planning.mdx": {
+	id: "2016-01-13-2016-planning.mdx";
+  slug: "2016-01-13-2016-planning";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2017-02-14-plan-for-2017.mdx": {
+	id: "2017-02-14-plan-for-2017.mdx";
+  slug: "2017-02-14-plan-for-2017";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2017-05-31-uttarakhand-prelude.mdx": {
+	id: "2017-05-31-uttarakhand-prelude.mdx";
+  slug: "2017-05-31-uttarakhand-prelude";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2017-06-20-day-1-drive-to-mussoorie.mdx": {
+	id: "2017-06-20-day-1-drive-to-mussoorie.mdx";
+  slug: "2017-06-20-day-1-drive-to-mussoorie";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2017-09-13-day-2-dehradun-haridwar.mdx": {
+	id: "2017-09-13-day-2-dehradun-haridwar.mdx";
+  slug: "2017-09-13-day-2-dehradun-haridwar";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2017-10-06-day-3-rishikesh.mdx": {
+	id: "2017-10-06-day-3-rishikesh.mdx";
+  slug: "2017-10-06-day-3-rishikesh";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "2018-05-18-north-east-2018-planning.mdx": {
 	id: "2018-05-18-north-east-2018-planning.mdx";
   slug: "2018-05-18-north-east-2018-planning";
