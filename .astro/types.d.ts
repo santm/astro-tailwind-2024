@@ -388,6 +388,111 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"2004-02-14-st-michel.mdx": {
+	id: "2004-02-14-st-michel.mdx";
+  slug: "2004-02-14-st-michel";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-02-20-a-year-in-paris.mdx": {
+	id: "2004-02-20-a-year-in-paris.mdx";
+  slug: "2004-02-20-a-year-in-paris";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-03-08-got-an-ipod.mdx": {
+	id: "2004-03-08-got-an-ipod.mdx";
+  slug: "2004-03-08-got-an-ipod";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-05-08-la-hollande-allez-y-maintenant.mdx": {
+	id: "2004-05-08-la-hollande-allez-y-maintenant.mdx";
+  slug: "2004-05-08-la-hollande-allez-y-maintenant";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-05-10-barcelona.mdx": {
+	id: "2004-05-10-barcelona.mdx";
+  slug: "2004-05-10-barcelona";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-05-10-provence-south-of-france.mdx": {
+	id: "2004-05-10-provence-south-of-france.mdx";
+  slug: "2004-05-10-provence-south-of-france";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-06-05-itlay-revisited.mdx": {
+	id: "2004-06-05-itlay-revisited.mdx";
+  slug: "2004-06-05-itlay-revisited";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-06-12-musee-guimet.mdx": {
+	id: "2004-06-12-musee-guimet.mdx";
+  slug: "2004-06-12-musee-guimet";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-08-17-disneyland-paris.mdx": {
+	id: "2004-08-17-disneyland-paris.mdx";
+  slug: "2004-08-17-disneyland-paris";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-08-22-paris-in-night-mode.mdx": {
+	id: "2004-08-22-paris-in-night-mode.mdx";
+  slug: "2004-08-22-paris-in-night-mode";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-08-26-opera-alcina.mdx": {
+	id: "2004-08-26-opera-alcina.mdx";
+  slug: "2004-08-26-opera-alcina";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-10-18-greece.mdx": {
+	id: "2004-10-18-greece.mdx";
+  slug: "2004-10-18-greece";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-11-12-chateau-de-versailles.mdx": {
+	id: "2004-11-12-chateau-de-versailles.mdx";
+  slug: "2004-11-12-chateau-de-versailles";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-11-22-loire-valley.mdx": {
+	id: "2004-11-22-loire-valley.mdx";
+  slug: "2004-11-22-loire-valley";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2004-12-18-happy-holidays.mdx": {
+	id: "2004-12-18-happy-holidays.mdx";
+  slug: "2004-12-18-happy-holidays";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "2010-10-29-des-vacances.mdx": {
 	id: "2010-10-29-des-vacances.mdx";
   slug: "Week long trip to Rajasthan";
