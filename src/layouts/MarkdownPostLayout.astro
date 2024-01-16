@@ -89,13 +89,19 @@ const formatMonth = (date: string | number | Date) => {
                   )}
                 </div> <!-- tags end -->
                 <!-- <Image src={cover} alt={coverAlt} /> -->
-                <Image
+                <figure>
+                  <Image
   src={cover}
   widths={[240, 540, 720, cover.width]}
   sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${cover.width}px`}
   alt={ coverAlt ? `${coverAlt}` : `A description of cover image.` }
-  class="shadow-xl dark:shadow-gray-800 m-4 md:m-8"
+  class="w-full object-cover py-4 border-1 border-slate-500"
 />
+<figcaption class="my-3 text-sm text-center text-gray-500">
+  { coverAlt ? `${coverAlt}` : ` ` }
+</figcaption>
+                </figure>
+                
 
                   <article class="text-pretty prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none text-justify tracking-wide"><slot /></article> 
           

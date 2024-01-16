@@ -493,6 +493,90 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"2005-04-15-new-pc.mdx": {
+	id: "2005-04-15-new-pc.mdx";
+  slug: "2005-04-15-new-pc";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-17-bonjour.mdx": {
+	id: "2005-05-17-bonjour.mdx";
+  slug: "2005-05-17-bonjour";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-20-vienna-austria.mdx": {
+	id: "2005-05-20-vienna-austria.mdx";
+  slug: "2005-05-20-vienna-austria";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-21-madrid-spain.mdx": {
+	id: "2005-05-21-madrid-spain.mdx";
+  slug: "2005-05-21-madrid-spain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-22-granada-spain.mdx": {
+	id: "2005-05-22-granada-spain.mdx";
+  slug: "2005-05-22-granada-spain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-23-alhambra-granada-spain.mdx": {
+	id: "2005-05-23-alhambra-granada-spain.mdx";
+  slug: "2005-05-23-alhambra-granada-spain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-24-seville-spain.mdx": {
+	id: "2005-05-24-seville-spain.mdx";
+  slug: "2005-05-24-seville-spain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-25-cordoba-spain.mdx": {
+	id: "2005-05-25-cordoba-spain.mdx";
+  slug: "2005-05-25-cordoba-spain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-25-evening-in-seville-spain.mdx": {
+	id: "2005-05-25-evening-in-seville-spain.mdx";
+  slug: "2005-05-25-evening-in-seville-spain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-26-seville-spain.mdx": {
+	id: "2005-05-26-seville-spain.mdx";
+  slug: "2005-05-26-seville-spain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-28-lisbon-portugal.mdx": {
+	id: "2005-05-28-lisbon-portugal.mdx";
+  slug: "2005-05-28-lisbon-portugal";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"2005-05-29-hotel-train-lisbon-to-madrid.mdx": {
+	id: "2005-05-29-hotel-train-lisbon-to-madrid.mdx";
+  slug: "2005-05-29-hotel-train-lisbon-to-madrid";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "2010-10-29-des-vacances.mdx": {
 	id: "2010-10-29-des-vacances.mdx";
   slug: "Week long trip to Rajasthan";
