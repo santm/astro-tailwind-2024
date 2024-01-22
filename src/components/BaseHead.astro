@@ -43,3 +43,26 @@ const { title = SITE.title, description = SITE.description, image = SITE.image }
 <meta property="twitter:title" content={title} />
 {description && <meta property="twitter:description" content={description} />}
 {image && <meta property="twitter:image" content={image} />}
+<!-- Block Quote blokquote -->
+<style>
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --blockquote-background: rgb(64, 34, 78);
+      --blockquote-border: rgb(189, 83, 238);
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --blockquote-background: rgb(189, 83, 238);
+      --blockquote-border: rgb(64, 34, 78);
+    }
+  }
+
+  blockquote {
+    background-color: var(--blockquote-background);
+    border-color: var(--blockquote-border);
+  }
+</style>
+
+<!-- Block Quote blokquote -->

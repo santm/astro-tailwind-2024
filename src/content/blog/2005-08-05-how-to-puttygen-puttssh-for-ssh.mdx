@@ -1,0 +1,37 @@
+---
+author: Santanu
+category: General
+cover: '../../assets/blog_pics/no-image.webp'
+coverAlt: ''
+description: 'A Step-by-Step Guide to SSH' 
+pubDate: 2005-08-05
+tags:
+- tech notes
+title: '[How To] Puttygen Puttssh for ssh'
+---
+**1. Run PuttyKeyGen**
+1.a Ensure SSH2DSA is selected at the bottom.
+1.b Click on Generate.
+1.c Follow the on-screen instructions to move the mouse.
+**2. Once the key is generated**
+2.a Add a proper comment for the key, including the username and hostname.
+2.b Choose a strong password, incorporating numbers, special characters, and uppercase letters.
+2.c Save the public and private key in **C:\\Documents and Settings\\santanu.misra**.
+**3. Add pageant.exe to your startup programs as a shortcut.**
+**4. Modify the properties box:**
+4.a In the "Target" box, add the private-key file name.
+4.b In the "Start in" box, put the directory where you stored the public key (refer to step 2.c).
+4.c Set "Run" to minimized.
+**5. Right-click on pageant for key addition:**
+5.a Choose your private key file generated with PuttyKeyGen. Enter the password from step 2.b when prompted.
+5.b View your key using the "View Key" option; delete the key if needed.
+**6. Configure Putty to work with public and private keys.**
+Note: I modified "ScrollbackLines" for Putty using regedit to increase scroll back lines (default is 200). The key is located at 
+```
+MyComputer\HKEY_CURRENT_USER\Software\SimonTatham\PuttY\Sessions\Default%20Settings
+````
+*For quick access to known servers, automate login via (ssh):*
+````
+ssh-add -L >> .ssh/authorized_keys
+````
+*Enhance your security with this comprehensive guide to setting up SSH keys using PuttyKeyGen. Learn the essential steps, from key generation to configuring Putty, ensuring a seamless and secure access experience.*
