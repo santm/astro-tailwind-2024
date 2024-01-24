@@ -3,43 +3,32 @@ author: Santanu
 category: General
 cover: '../../assets/blog_pics/no-image.webp'
 coverAlt: ''
-description: 2006-05-18-load-cpu-memory-shell-script-c-program-for-quick-and-dirty-benchmark
+description: Another TechNote
 pubDate: 2006-05-18
 tags:
 - tech notes
 title: load cpu & memory shell script c program for quick and dirty benchmark
 ---
+**Headline:** *CPU Stress Test: Unveiling the Power of a Simple Script*
 
-This script is a simple empty while loop which will load or increase the
+Ever wondered about your CPU's limits? Testing your CPU's performance is a breeze with a straightforward script. Let's delve into a simple empty while loop designed to load or increase your CPU usage. It's a great way to push your CPU to its boundaries, and you can check the results using various monitoring tools.
 
-usage of your cpu.  
+```bash
+while :
+> do :
+> done
+```
 
-a good way to test your cpu check for different monitoring tool  
+```c
+/home/sanmisra>more memory.c
+ main ()
+ {
+ while ( 1 ) {
+ malloc (10240) ;
+ }
+ }
+```
 
-  
+This script comprises an uncomplicated infinite while loop that continuously loads or spikes your CPU usage. For those curious about their CPU's capabilities, this script serves as an effective test. Monitor and analyze your CPU's performance with different tools to gain valuable insights. The provided code snippets showcase the simplicity and power behind this script.
 
-
-
-while :  
-
-&gt; do :  
-
-&gt; done  
-
-  
-
-/home/sanmisra&gt;more memory.c  
-
-
-
-> main ()  
-
-> {  
-
-> while ( 1 ) {  
-
-> malloc (10240) ;  
-
-> }  
-
-> }
+In this C code, a perpetual loop allocates memory in chunks, offering another perspective on pushing the CPU's boundaries. Feel free to experiment and see how your CPU responds to this stress test.
