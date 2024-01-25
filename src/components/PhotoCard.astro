@@ -1,25 +1,32 @@
 ---
 const { title, link, img_src, description } = Astro.props;
 ---
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 my-1 px-1 lg:my-4 lg:px-4">
-      <div class="flex flex-col h-full">
-        <article class="text-pretty overflow-hidden rounded-lg bg-zinc-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-slate-700 flex flex-col">
-          <div class="relative group flex-grow">
-            <a href={link}>
-              <img alt={title} class="block h-auto w-full" src={img_src}>
-            </a>
-            <div class="opacity-0 group-hover:opacity-80 duration-300 absolute inset-x-0 bottom-0 flex justify-center items-end text-sm bg-gray-200 text-black font-normal m-4 flex-grow">
-              {description}
-            </div>
-          </div>
-          <div class="p-6">
-            <h5 class="text-balance mb-2 font-semibold leading-tight text-neutral-800 dark:text-neutral-50" >
-              {title}
-            </h5>
-          </div>
-        </article>
+
+<div
+  class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 my-1 px-1 lg:my-4 lg:px-4"
+>
+  <div class="flex flex-col h-full">
+    <article
+      class="text-pretty overflow-hidden rounded-lg bg-zinc-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-slate-700 flex flex-col"
+    >
+      <div class="relative group flex-grow">
+        <a href={link}>
+          <img alt={title} class="block h-auto w-full" src={img_src} />
+        </a>
+        <div
+          class="opacity-0 group-hover:opacity-80 duration-300 absolute inset-x-0 bottom-0 flex justify-center items-end text-sm bg-gray-200 text-black font-normal m-4 flex-grow"
+        >
+          {description}
+        </div>
       </div>
-    </div>
-    <!-- More cards with similar structure -->  
-    
-      
+      <div class="p-6">
+        <h5
+          class="text-balance mb-2 font-semibold leading-tight text-neutral-800 dark:text-neutral-50"
+        >
+          {title}
+        </h5>
+      </div>
+    </article>
+  </div>
+</div>
+<!-- More cards with similar structure -->
