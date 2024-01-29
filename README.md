@@ -9,4 +9,13 @@
 - Search Pagefind 
 - Favicons 
 - site.webmanifest 
-- Astro Transition -- break my implementation of dark/light beeds to 
+- Astro Transition -- break my implementation of dark/light needs to 
+To do 
+
+- Astro Icon
+- start a clean one 
+- git hub markdown 
+
+:::note
+Hello, world
+:::
