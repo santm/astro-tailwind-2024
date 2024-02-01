@@ -33,10 +33,10 @@ import { Image } from 'astro:assets';
    
            {last4posts.map(blogPostEntry => (
             <div class="group flex flex-col h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href={`/blog/${blogPostEntry.slug}`}><Image src={blogPostEntry.data.cover} alt={ blogPostEntry.data.coverAlt ? `${blogPostEntry.data.coverAlt}` : `generic alt text` } /></a>
+              <a href={`/blog/${blogPostEntry.slug}/`}><Image src={blogPostEntry.data.cover} alt={ blogPostEntry.data.coverAlt ? `${blogPostEntry.data.coverAlt}` : `generic alt text` } /></a>
               <div class="p-4 md:p-6">
       <div class="mb-3"><p class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-md text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200"><a href={`/categories/${blogPostEntry.data.category}/`}>{blogPostEntry.data.category}</a></p></div>
-        <a href={`/blog/${blogPostEntry.slug}`}>
+        <a href={`/blog/${blogPostEntry.slug}/`}>
             <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">{blogPostEntry.data.title}</h3>
         </a>
         <p class="mt-3 text-gray-500">{blogPostEntry.data.description}</p>
@@ -47,7 +47,7 @@ import { Image } from 'astro:assets';
                 {blogPostEntry.data.pubDate.toDateString()}
               </time>
           </span>
-          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 font-medium !text-blue-gray-900 !transition-colors hover:!text-pink-500" href={`/blog/${blogPostEntry.slug}`}>
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 font-medium !text-blue-gray-900 !transition-colors hover:!text-pink-500" href={`/blog/${blogPostEntry.slug}/`}>
             Read more
              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
