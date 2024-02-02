@@ -10,7 +10,7 @@ const { title, link, img_src, description } = Astro.props;
       class="text-pretty overflow-hidden rounded-lg bg-zinc-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-slate-700 flex flex-col"
     >
       <div class="relative group flex-grow">
-        <a href={link}>
+        <a href={link} target="_blank">
           <img alt={title} class="block h-auto w-full" src={img_src} />
         </a>
         <div
