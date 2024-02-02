@@ -4,11 +4,11 @@
   "version": "0.0.1",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "astro dev",
+    "dev": "astro preferences disable devToolbar && astro dev ",
     "start": "astro dev",
     "build": "astro build",
     "postbuild": "pagefind --site dist --verbose",
-    "search": "astro build && npm run postbuild && astro preview",
+    "search": "astro build && pnpm run postbuild && astro preview",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -19,6 +19,7 @@
     "@astrojs/sitemap": "^3.0.5",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.3.0",
+    "astro-icon": "^1.0.4",
     "dayjs": "^1.11.10",
     "hastscript": "^9.0.0",
     "markdown-it": "^14.0.0",
