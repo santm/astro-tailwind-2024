@@ -1,3 +1,17 @@
+## To do 
+- start a clean one 
+- site.webmanifest 
+- git hub markdown 
+        :::note
+        Hello, world
+        :::
+- Astro Icon -  need to check each files if emoji or svg is there
+- Analytics **plausible.io**
+- switcher icon **https://toggles.dev/**
+
+
+
+## Things done already 
 - SEO
 - RSS
 - Dark & Light mode support
@@ -8,14 +22,7 @@
 - Year wise listing better sidebar 
 - Search Pagefind 
 - Favicons 
-- site.webmanifest 
 - Astro Transition -- break my implementation of dark/light needs to 
-To do 
-
-- Astro Icon
-- start a clean one 
-- git hub markdown 
-
-:::note
-Hello, world
-:::
+- Astro Icon - phosphor added for footer ; need to check each files
+- added python script (add-target-blank.py)to convert external to **['target'] = '_blank'**
+- Added [https://expressive-code.com/](ExpressiveCode) please move astroExpressiveCode() before mdx()
