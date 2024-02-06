@@ -10,7 +10,8 @@ export default defineConfig({
     tailwind(),
     sitemap(),
     ExpressiveCode({
-      themes: ['rose-pine-dawn','dracula'],
+      themes: ['dracula','light-plus'],
+      themeCssSelector: (theme) => `.${theme.type}`,
     }),
     mdx(),
     icon()

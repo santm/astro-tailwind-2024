@@ -11,37 +11,39 @@ const formattedDate = originalDate.toLocaleString('en-US', options);
 
 ---
 <!-- Card -->
-  <div class="group flex flex-col h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href={link}>
-      <!-- {
-        img_src ? (
-          <img class="rounded-t-lg" src={img_src} alt={alt} />
-        ) : hasImageImport ? (
-          <img class="rounded-t-lg" src={firstImagePath} alt="firstImagePath" />
-        ) : (
-          <img class="rounded-t-lg" src="https://ik.imagekit.io/santm/rose-large_zgSiv4dBc.webp" alt="Default Alt Text" />
-        )
-      } -->
-      <Image src={cover} alt={ coverAlt ? `${coverAlt}` : `generic alt text` } />
-          
-    </a>
-    <div class="p-4 md:p-6">
-      <div class="mb-3"><p class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-md text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200"><a href={`/categories/${category}/`}>{category}</a></p></div>
-        <a href={link}>
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">{title}</h3>
-        </a>
-        <p class="mt-3 text-gray-500">{description}</p>
-        <!-- <p class="mt-3 text-gray-500">{firstImagePath}</p> -->
-        </div><div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
-          <span class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm  disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white  dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-            {formattedDate}
-          </span>
-          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 font-medium !text-blue-gray-900 !transition-colors hover:!text-pink-500" href={link}>
-            Read more
-             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
+<div className="relative flex w-1/4 h-[500px] mx-auto mt-10">
+  {/* Gradient background of same width & height  as Blog post card  */}
+  <div className=" rounded-xl w-full bg-gradient-to-r p-[5px] from-[#7928ca] to-[#ff0080]">
+    <div className="flex flex-col justify-between h-full bg-black rounded-lg p-4">
+      <div className="flex flex-col justify-center text-white">
+        {/* PostImage */}
+
+        <img src="/postImage.png" className="h-52 mb-5 rounded-lg" />
+        {/* Post title */}
+
+        <h1 className="text-3xl font-extrabold mb-4">
+          This is first title.
+        </h1>
+        {/* Post Data/excerpt */}
+        <p className="text-lg md:text-lg font-medium mb-6  ">
+          Everything I Know About Style Guides, Design Systems, and
+          Component Libraries
+        </p>
+      </div>
+      {/* Author image with data */}
+      <div className=" flex w-full justify-between mb-4">
+        <span>
+          <img
+            src="/author.jpg"
+            className="w-[75px] h-[80px] rounded-full  "
+          />
+        </span>
+        <p className="text-lg mr-5 font-semibold text-white flex items-center justify-center">
+          16 Nov, 2021
+        </p>
+      </div>
     </div>
+  </div>
 </div>
-<!-- End Card -->
+
+  

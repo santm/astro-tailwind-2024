@@ -9,13 +9,12 @@ const allPosts = (await getCollection('blog'));
 const sortedPosts = allPosts.sort((a, b) => {
   const dateA = new Date(a.data.pubDate) as any; // Explicitly specify the type
   const dateB = new Date(b.data.pubDate) as any; // Explicitly specify the type
-
   return dateB - dateA;
 });
 
 const last4posts = sortedPosts.slice(0,4);
 ---
-<BaseLayout content={{ }}>
+<BaseLayout content={{ title }}>
   <main class="space-y-40 mb-40">
     <HeroSection/>
     <LatestBlogs/>
