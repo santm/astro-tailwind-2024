@@ -14,7 +14,7 @@ const sortedPosts = allPosts.sort((a, b) => {
 
 const last4posts = sortedPosts.slice(0,4);
 ---
-<BaseLayout content={{ title }}>
+<BaseLayout content={{ title }} data-pagefind-ignore>
   <main class="space-y-40 mb-40">
     <HeroSection/>
     <LatestBlogs/>

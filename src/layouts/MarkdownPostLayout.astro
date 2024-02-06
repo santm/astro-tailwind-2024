@@ -47,7 +47,7 @@ const formatMonth = (date: string | number | Date) => {
   return `${day}${daySuffix} ${month}`;
     };
 ---
-<BaseLayout content={{ title, description }}>
+<BaseLayout content={{ title, description }} data-pagefind-body>
 
         <div>
           <div id="author_block" class="flex my-6 justify-between">
@@ -99,7 +99,7 @@ const formatMonth = (date: string | number | Date) => {
                 </figure>
                 
 
-                  <article class="text-pretty prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none text-justify tracking-wide"><slot /></article> 
+                  <article class="text-pretty prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none text-justify tracking-wide" ><slot /></article> 
           
         </div>
 

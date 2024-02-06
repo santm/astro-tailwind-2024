@@ -8,7 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "postbuild": "pagefind --site dist --verbose",
-    "search": "astro build && pnpm run postbuild && astro preview",
+    "search": "astro build && pnpm run postbuild  && node minify_html.mjs && astro preview",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -22,6 +22,9 @@
     "astro-expressive-code": "^0.32.4",
     "astro-icon": "^1.1.0",
     "dayjs": "^1.11.10",
+    "globby": "^14.0.0",
+    "html-minifier": "^4.0.0",
+    "jsdom": "^24.0.0",
     "sharp": "^0.33.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
