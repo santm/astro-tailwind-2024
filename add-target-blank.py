@@ -1,16 +1,11 @@
 import os
 from bs4 import BeautifulSoup
-from urllib.parse import urlparse
-
-def is_external_link(base_url, link):
-    parsed_base = urlparse(base_url)
-    parsed_link = urlparse(link)
-    return parsed_base.netloc != parsed_link.netloc
 
 def add_target_blank(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     for a_tag in soup.find_all('a', href=True):
-        if is_external_link(base_url, a_tag['href']) and not a_tag.has_attr('target'):
+        href = a_tag['href']
+        if href.startswith('http') and not a_tag.has_attr('target'):
             a_tag['target'] = '_blank'
     return str(soup)
 
@@ -27,12 +22,6 @@ if __name__ == "__main__":
 
     if not os.path.isdir(directory):
         print("Invalid directory path.")
-        exit()
-
-    base_url = input("Enter the base URL of your website: ")
-
-    if not base_url.startswith('http'):
-        print("Invalid base URL.")
         exit()
 
     for root, dirs, files in os.walk(directory):

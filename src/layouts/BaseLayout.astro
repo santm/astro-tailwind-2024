@@ -14,40 +14,6 @@ import { ViewTransitions } from 'astro:transitions';
   <head>
     <BaseHead title={ content.title ? `${content.title} | ${ SITE.title }` : SITE.title } description={ content.description } image={SITE.image}/>
 
-          <!-- <script>
-            const setDarkMode = () => {
-              if (localStorage.darkMode === 'true' || (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-                localStorage.darkMode = 'true';
-              } else {
-                document.documentElement.classList.remove('dark');
-                localStorage.darkMode = 'false';
-              }
-            }
-        
-            setDarkMode();
-            // Runs on view transitions navigation
-            document.addEventListener('astro:after-swap', setDarkMode);
-        
-            const setDarkModeButton = () => {
-              const button = document.querySelector("#themeToggle");
-              if (button) {  // Check if button is found before attempting to add event listener
-                button.addEventListener('click', function () {
-                  document.documentElement.classList.toggle('dark');
-        
-                  if (document.documentElement.classList.contains('dark')) {
-                    localStorage.darkMode = 'true';
-                  } else {
-                    localStorage.darkMode = 'false';
-                  }
-                });
-              }
-            }
-        
-            setDarkModeButton();
-            // Runs on view transitions navigation
-            document.addEventListener('astro:after-swap', setDarkModeButton);
-          </script> -->
           <script>
             const setDarkMode = () => {
             if (localStorage.darkMode === 'true' || (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -74,9 +40,6 @@ import { ViewTransitions } from 'astro:transitions';
                 } else {
                   localStorage.darkMode = 'false';
                 }
-          
-                // Manually trigger the `useDarkModeMediaQuery` function
-                astroExpressiveCode.updateTheme();
               });
             }
           };
