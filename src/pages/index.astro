@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = "Home Page";
-import HeroSection from '../components/HeroSection.astro';
+import Herosection from '../components/Herosection.astro';
 import LatestBlogs from '../components/LatestBlogs.astro';
 import { getCollection } from "astro:content";
 const allPosts = (await getCollection('blog')); 
@@ -16,7 +16,7 @@ const last4posts = sortedPosts.slice(0,4);
 ---
 <BaseLayout content={{ title }} data-pagefind-ignore>
   <main class="space-y-40 mb-40">
-    <HeroSection/>
+    <Herosection/>
     <LatestBlogs/>
   </main>
 </BaseLayout>
