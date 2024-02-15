@@ -2901,6 +2901,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"2024-02-10-Jaipur-day-2.mdx": {
+	id: "2024-02-10-Jaipur-day-2.mdx";
+  slug: "2024-02-10-jaipur-day-2";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 };
 "santm-testing-image": {
 "1.mdx": {

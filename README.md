@@ -1,3 +1,5 @@
+# THis is my Production Branch for now - 2024
+
 ## To do 
 - start a clean one 
 - site.webmanifest 
@@ -9,6 +11,8 @@
 - Analytics **plausible.io**
 - switcher icon **https://toggles.dev/**
 - blog card border bottom ; for now we added gradient border
+- https://cruip.com/create-dynamic-blog-layouts-using-negative-margins/ ; the idea and some input is saved blog_layouts_negative_margins.md
+
 
 
 

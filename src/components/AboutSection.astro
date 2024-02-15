@@ -18,9 +18,17 @@ import santanuAvatarPath from "../assets/avatars/santanu_profile.webp";
 // Use avatarImageSources object as needed to access specific avatar images and sizes
 ---
 
-<h1 class="text-balance pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">About Us</h1>
-<p class="text-pretty text-justify prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">
-  We like to travel, make new friends and explore and understand diversity and cultures at its best. We try to do that along with day jobs. Check out our photos, travelog, random thoughts and creativity. <br />
+<h1
+  class="text-balance pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+>
+  About Us
+</h1>
+<p
+  class="text-pretty text-justify prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none"
+>
+  We like to travel, make new friends and explore and understand diversity and
+  cultures at its best. We try to do that along with day jobs. Check out our
+  photos, travelog, random thoughts and creativity. <br />
 </p>
 <!-- grid start-->
 <div class="grid items-center gap-12 md:grid-cols-3 pt-4">
@@ -29,11 +37,15 @@ import santanuAvatarPath from "../assets/avatars/santanu_profile.webp";
       src={aarushAvatarPath}
       widths={[240, 540, 720, aarushAvatarPath.width]}
       sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${aarushAvatarPath.width}px`}
-      alt={'Aarush'}
+      alt={"Aarush"}
       class="rounded-lg shadow-xl dark:shadow-gray-800 m-4 md:m-8"
     />
     <div>
-      <h4 class="text-balance capitalize text-2xl text-gray-700 dark:text-white">Aarush</h4>
+      <h4
+        class="text-balance capitalize text-2xl text-gray-700 dark:text-white"
+      >
+        Aarush
+      </h4>
     </div>
   </div>
   <div class="space-y-4 text-center">
@@ -41,11 +53,15 @@ import santanuAvatarPath from "../assets/avatars/santanu_profile.webp";
       src={pamelaAvatarPath}
       widths={[240, 540, 720, pamelaAvatarPath.width]}
       sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${pamelaAvatarPath.width}px`}
-      alt={'Pamela'}
+      alt={"Pamela"}
       class="rounded-lg shadow-xl dark:shadow-gray-800 m-4 md:m-8"
     />
     <div>
-      <h4 class="text-balance capitalize text-2xl text-gray-700 dark:text-white">Pamela</h4>
+      <h4
+        class="text-balance capitalize text-2xl text-gray-700 dark:text-white"
+      >
+        Pamela
+      </h4>
     </div>
   </div>
   <div class="space-y-4 text-center">
@@ -53,11 +69,15 @@ import santanuAvatarPath from "../assets/avatars/santanu_profile.webp";
       src={santanuAvatarPath}
       widths={[240, 540, 720, santanuAvatarPath.width]}
       sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${santanuAvatarPath.width}px`}
-      alt={'Santanu'}
+      alt={"Santanu"}
       class="rounded-lg shadow-xl dark:shadow-gray-800 m-4 md:m-8"
     />
     <div>
-      <h4 class="text-balance capitalize text-2xl text-gray-700 dark:text-white">Santanu</h4>
+      <h4
+        class="text-balance capitalize text-2xl text-gray-700 dark:text-white"
+      >
+        Santanu
+      </h4>
     </div>
   </div>
 </div>
@@ -71,12 +91,19 @@ import santanuAvatarPath from "../assets/avatars/santanu_profile.webp";
           jsonData.map((entry, entryIndex) => (
             <div>
               <div class="ps-2 my-2 first:mt-0">
-                <h3 class="text-balance text-xs font-medium uppercase text-gray-500 dark:text-gray-400">{entry.date}</h3>
+                <h3 class="text-balance text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
+                  {entry.date}
+                </h3>
               </div>
               <div class="flex gap-x-3">
                 <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700">
                   <div class="relative z-10 w-7 h-7 flex justify-center items-center">
-                    <svg class="fill-purple-700 dark:fill-purple-200" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox={entry.viewbox}>
+                    <svg
+                      class="fill-purple-700 dark:fill-purple-200"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox={entry.viewbox}
+                    >
                       {entry.paths.map((path, pathIndex) => (
                         <path fill={path.fill} d={path.d} />
                       ))}
@@ -85,8 +112,12 @@ import santanuAvatarPath from "../assets/avatars/santanu_profile.webp";
                 </div>
 
                 <div class="grow pt-0.5 pb-8">
-                  <h3 class="text-balance flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">{entry.title}</h3>
-                  <article class="text-pretty mt-1 prose-sm text-gray-600 dark:text-gray-400">{entry.description} </article>
+                  <h3 class="text-balance flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
+                    {entry.title}
+                  </h3>
+                  <article class="text-pretty mt-1 prose-sm text-gray-600 dark:text-gray-400">
+                    {entry.description}{" "}
+                  </article>
                 </div>
               </div>
             </div>
@@ -97,5 +128,10 @@ import santanuAvatarPath from "../assets/avatars/santanu_profile.webp";
   </div>
 </div><!-- TimeLine -->
 <div>
-  <article class="text-pretty prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none py-4">Thank You! 🙏 for your time to read this far, little intrigued and a bit curious, what might be the reason behind the same 😎, be in touch.</article>
+  <article
+    class="text-pretty prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none py-4"
+  >
+    Thank You! 🙏 for your time to read this far, little intrigued and a bit
+    curious, what might be the reason behind the same 😎, be in touch.
+  </article>
 </div>

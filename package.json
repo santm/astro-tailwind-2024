@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "astro preferences disable devToolbar && astro dev ",
+    "dev": "astro dev ",
     "start": "astro dev",
     "build": "astro build",
     "postbuild": "pagefind --site dist --verbose",
@@ -18,11 +18,12 @@
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.0.5",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.3.5",
+    "astro": "^4.3.7",
+    "astro-auto-import": "^0.4.2",
     "astro-expressive-code": "^0.32.4",
     "astro-icon": "^1.1.0",
     "dayjs": "^1.11.10",
-    "globby": "^14.0.0",
+    "globby": "^14.0.1",
     "html-minifier": "^4.0.0",
     "jsdom": "^24.0.0",
     "sharp": "^0.33.2",
@@ -32,6 +33,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "pagefind": "^1.0.4",
     "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.11"
   }
 }
