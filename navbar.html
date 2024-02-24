@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-white text-xl font-bold">Logo</a>
+
+            <!-- Menu Button (Hamburger) -->
+            <menu-button>
+                <template>
+                    <button aria-label="Toggle menu" class="text-white focus:outline-none lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </template>
+            </menu-button>
+
+            <!-- Menu Items -->
+            <ul id="menu-content" class="hidden lg:flex lg:space-x-8 text-white">
+                <li><a href="#" class="hover:text-gray-200">Home</a></li>
+                <li><a href="#" class="hover:text-gray-200">About</a></li>
+                <li><a href="#" class="hover:text-gray-200">Services</a></li>
+                <li><a href="#" class="hover:text-gray-200">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- JavaScript -->
+    <script>
+        class MenuButton extends HTMLElement {
+            constructor() {
+                super();
+
+                // Inject menu toggle button when JS runs.
+                this.appendChild(this.querySelector('template').content.cloneNode(true));
+                const btn = this.querySelector('button');
+
+                // Hide menu (shown by default to support no-JS browsers).
+                const menu = document.getElementById('menu-content');
+                menu.hidden = true;
+                // Add "menu-content" class in JS to avoid covering content in non-JS browsers.
+                menu.classList.add('menu-content');
+
+                /** Set whether the menu is currently expanded or collapsed. */
+                const setExpanded = (expand) => {
+                    btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+                    menu.hidden = !expand;
+                };
+
+                // Toggle menu visibility when the menu button is clicked.
+                btn.addEventListener('click', () => setExpanded(menu.hidden));
+
+                // Hide menu button for large screens.
+                const handleViewports = (e) => {
+                    setExpanded(e.matches);
+                    btn.hidden = e.matches;
+                };
+                const mediaQueries = window.matchMedia('(min-width: 50em)');
+                handleViewports(mediaQueries);
+                mediaQueries.addEventListener('change', handleViewports);
+            }
+        }
+        customElements.define('menu-button', MenuButton);
+    </script>
+</body>
+</html>

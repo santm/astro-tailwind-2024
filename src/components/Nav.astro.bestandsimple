@@ -1,0 +1,80 @@
+---
+const textLinks: { label: string; href: string }[] = [
+  { label: "Blog", href: "/blog/" },
+  { label: "Nature", href: "/birdsandwildlife/" },
+  { label: "Travel", href: "/travelalbums/" },
+  { label: "About", href: "/about/" },
+  { label: "Tags", href: "/tags/" },
+];
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+import { Icon } from 'astro-icon/components';
+---
+<header>
+  <!-- navbar goes here -->
+<nav class="fixed inset-x-0 z-20 w-full backdrop-blur border-b border-gray-100 bg-white/80 dark:border-gray-700/30 dark:bg-gray-900/80">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+
+      <div class="flex space-x-4">
+        <!-- logo -->
+        <div>
+          <a href="/" aria-label="website logo" class="flex items-center py-5 px-2 text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">SANTM</a>
+        </div><!--logo -->
+
+        <!-- primary nav -->
+        <div class="hidden md:flex items-center space-x-1">
+          <!-- <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Features</a>
+          <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Pricing</a> -->
+          {
+             textLinks.map(({ label, href }) => {
+              const menuItemParentPath = href.slice(1, href.lastIndexOf("/")); // Extract the parent path
+              const isActive = currentPath.includes(menuItemParentPath);
+              return (
+                <span class={`block md:px-4 text-lg font-bold ${isActive ? "text-pink-500" : "text-black dark:text-white md:after:block md:after:mx-auto md:after:h-[0.15em] md:after:bottom-0 md:after:w-0 md:after:bg-pink-500 md:after:transition-[all_ease_in_out_300ms] md:after:mt-1 md:hover:after:w-full"}`} >
+                  <a href={href} data-astro-prefetch class="py-5 px-3">{label}</a>
+                </span>
+              
+              );
+            })
+          }
+        </div>
+      </div>
+
+      <!-- secondary nav -->
+      <div class="hidden md:flex items-center space-x-1">
+        <!-- <a href="" class="py-5 px-3">Login</a>
+        <a href="" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300">Signup</a> -->
+        <!-- santanu hidden for now -->
+      </div>
+
+      <!-- mobile button goes here -->
+      <div class="md:hidden flex items-center">
+        <button class="mobile-menu-button">
+          <Icon name="phosphor/list" class="text-xl">   
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu hidden md:hidden">
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Features</a>
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Pricing</a>
+  </div>
+</nav>
+
+</header>
+<script>
+  // grab everything we need
+const btn = document.querySelector("button.mobile-menu-button");
+const menu = document.querySelector(".mobile-menu");
+
+// add event listeners
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
+</script>
+  
