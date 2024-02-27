@@ -6,7 +6,7 @@ export const SITE = {
     url: 'https://santm.com/',
     githubUrl: '',
     listDrafts: true,
-    image: 'https://santm.com/images/logo192.JPG',
+    image: 'https://santm.com/images/logo192.jpg',
     // YT video channel Id (used in media.astro)
     ytChannelId: '',
     // Optional, user/author settings (example)
