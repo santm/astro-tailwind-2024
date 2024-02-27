@@ -1,5 +1,4 @@
 ---
-// import { ViewTransitions } from 'astro:transitions';
 import { SITE } from "../config";
 export type Props = {
   title: string;
@@ -8,14 +7,14 @@ export type Props = {
 };
 
 const { title = SITE.title, description = SITE.description, image = SITE.image } = Astro.props;
-
+import '../styles/global.css';
 ---
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<!-- <ViewTransitions /> -->
+
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link
@@ -25,7 +24,7 @@ const { title = SITE.title, description = SITE.description, image = SITE.image }
   href="/favicon-16x16.png"
 />
 <link rel="manifest" href="/site.webmanifest" />
-<!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" /> -->
+<link rel="sitemap" href="/sitemap-index.xml">
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="msapplication-TileColor" content="#da532c" />
@@ -43,3 +42,5 @@ const { title = SITE.title, description = SITE.description, image = SITE.image }
 <meta property="twitter:title" content={title} />
 {description && <meta property="twitter:description" content={description} />}
 {image && <meta property="twitter:image" content={image} />}
+
+

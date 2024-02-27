@@ -1,38 +1,38 @@
 ---
-import Container from "./Container.astro";
 const currentYear = new Date().getFullYear()
-//import Icon from './Icon.astro';
 import { Icon } from 'astro-icon/components';
 ---
-<!-- ========== FOOTER ========== -->
+<footer class="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-5 text-center">
+      <div class="text-gray-500 text-xs">
+        <Icon name="phosphor/copyright" class="text-xl inline-flex" />Copyright {currentYear} All Rights Reserved. Personal views only.
+      </div>
+      <!-- End Col -->
+  
+      <ul class="text-center text-gray-500 text-xs">
+        <li class="inline-block relative">
+          Power by <a class="text-gray-500 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200" href="https://astro.build/" target="_blank">
+            <Icon name="phosphor/rocket-takeoff" class="text-xl inline-flex" /></a> Made with <Icon name="phosphor/heart" class="text-red-700 text-xl inline-flex" /> and lots of
+            <Icon name="phosphor/coffee" class="dark:text-orange-100 text-xl inline-flex" />
+        </li>
 
-<footer>
-  <Container>
-    <div class="grid md:grid-cols-3 gap-x-2 gap-y-4 sm:flex p-4">
-      <div class="sm:col-span-1">
-        <p class="sm:mr-4 sm:pr-4 sm:border-r sm:border-slate-200 dark:sm:border-slate-200/5 text-gray-500 hover:text-gray-900 dark:hover:text-white"><Icon name="phosphor/copyright" class="text-xl inline-flex"></Icon>Copyright {currentYear} All Rights Reserved.<br /> Personal views only!!</p>
+      </ul>
+      <!-- End Col -->
+  
+      <!-- Social Brands -->
+      <div class="md:text-end space-x-2">
+        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold" href="https://www.instagram.com/s.a.n.t.m/" target="_blank">
+          <Icon name="phosphor/instagram" class="text-xl text-gray-500 dark:text-gray-400 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 inline-flex"/>
+        </a>
+        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold" href="https://github.com/santm/" target="_blank">
+          <Icon name="phosphor/github" class="text-xl text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 inline-flex"/>
+        </a>
+        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold" href="/rss.xml" target="_blank">
+          <Icon name="phosphor/rss" class="text-xl text-gray-500 hover:text-orange-700 dark:text-gray-400 dark:hover:text-orange-300 inline-flex"/>
+        </a>
       </div>
-      <div class="sm:col-span-1 md:m-auto">
-        <!-- <p class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-          Powered by <a href="https://astro.build/"><Icon name="bootstrap/rocket-takeoff" class="text-xl text-stone-900 dark:text-stone-100 inline-flex"/></a> made with <Icon name="bootstrap/heart" class="text-xl text-red-700 inline-flex"/>  and plenty of <Icon name="bootstrap/cup-hot-fill" class="text-xl text-orange-950 dark:text-orange-100 inline-flex"/></a>
-        </p> -->
-        <p class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-          Powered by <a href="https://astro.build/" target="_blank"><Icon name="phosphor/rocket-takeoff" class="text-xl inline-flex"/></a> made with <Icon name="phosphor/heart" class="text-xl text-red-700 inline-flex"/>  and plenty of <Icon name="phosphor/coffee" class="text-xl text-orange-950 dark:text-orange-100 inline-flex"/></a>
-        </p>
-      </div>
-      <div class="sm:col-span-1 sm:ml-auto">
-        <div class="flex self-center">
-          <a href="https://www.instagram.com/s.a.n.t.m/" class="pr-2 button" target="_blank">
-            <Icon name="phosphor/instagram" class="text-xl text-fuchsia-500 hover:text-fuchsia-700 dark:text-fuchsia-700 dark:hover:text-fuchsia-500 inline-flex"/>
-          </a>
-          <a href="https://github.com/santm/" class="pr-2 button text-right" target="_blank">
-            <Icon name="phosphor/github" class="text-xl  text-gray-500 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200 inline-flex"/>
-          </a>
-          <a href="/rss.xml" class="pr-2 button"><!-- RSS SVG code style="color: #FFA500" -->
-            <Icon name="phosphor/rss" class="text-xl text-orange-400 hover:text-orange-700 dark:text-orange-500 dark:hover:text-orange-300 inline-flex"/>
-          </a>
-        </div>
-      </div>
-    </div> 
-  </Container>
+      <!-- End Social Brands -->
+    </div>
+    <!-- End Grid -->
   </footer>

@@ -1,0 +1,7 @@
+.dark .dark-bg-radial-gradient
+{
+  background-image: radial-gradient(closest-side, rgba(76, 29, 149, .40), rgba(76, 29, 149, .10), transparent) !important;
+}
+h1 {
+    @apply font-serif;
+  }

@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
 const title = "Page Not Found";
 let description = 'error 404';
 import { Image } from "astro:assets";
-import fourofour from '../assets/404.svg';
+import fourofour from '@assets/svgs/404.svg';
 import { Icon } from "astro-icon/components";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -16,20 +16,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<Image src={fourofour} alt="not found"/>
 	</div>
 	<div class="text-center xl:max-w-4xl">
-		<h1
-			class="text-balance  pb-4 mb-6 text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-violet-800 dark:from-pink-300 dark:to-violet-700 no-underline">
+		<h1 class="text-balance  pb-4 mb-6 text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-transparent bg-gradient-to-r from-rose-500 to-violet-500 dark:from-blue-400 dark:via-indigo-500 dark:to-violet-800 bg-clip-text no-underline">
 			Page {canonicalURL.pathname} not found
 		</h1>
 		<p
-			class="mb-5 text-base font-normal text-gray-500 md:text-lg dark:text-gray-400"
+			class="mb-5 text-base font-normal text-gray-600 md:text-lg dark:text-gray-400"
 		>
 			Oops! Looks like you followed a bad link. Sorry for that.
 		</p>
-		<a href="/" class="text-sky-600 dark:text-sky-400 bg-sky-400/10 hover:bg-sky-400/20 font-semibold h-12 px-6 rounded-full w-full justify-center sm:w-auto  text-sm py-2.5 text-center inline-flex items-center mr-3">
-			<Icon name="phosphor/caret-double-left" class="inline-flex"></Icon> Go back home
-		 </a>
-
+		<a href="/">
+			<button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:bg-blue-100 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:bg-blue-800/30 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+				<Icon name="phosphor/house" class="inline-flex"></Icon> Home
+			</button>
+		</a>
 	</div>
 </div>
-
 </BaseLayout>

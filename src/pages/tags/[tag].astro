@@ -27,7 +27,7 @@ const { tag } = Astro.params
 <BaseLayout content={{ title: `Posts by Tag: ${tag.charAt(0).toUpperCase() + tag.slice(1)}`, description: `Collection of articles that may not be anything, but offer an effort by us to remember something and reflect upn and a dash of very emeotions` }}>
 
             <div data-pagefind-ignore>
-                <h1 class="text-balance pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">{`Posts by Tag: ${tag.charAt(0).toUpperCase() + tag.slice(1)}`}</h1>
+                <h1 class="text-balance pb-4 text-4xl md:text-6xl font-extrabold text-transparent bg-gradient-to-r from-rose-500 to-violet-500 dark:from-blue-400 dark:via-indigo-500 dark:to-violet-800 bg-clip-text no-underline">{`Posts by Tag: ${tag.charAt(0).toUpperCase() + tag.slice(1)}`}</h1>
                 <p class="prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none">Collection of articles that may not be anything, but offer an effort by us to remember something and reflect upn and a dash of very emeotions.</p>
                 <li class="tag"><a  href={`/tags/${tag.toLowerCase()}/`} title={`View posts tagged under "${tag.charAt(0).toUpperCase() + tag.slice(1) }"`}>{tag.charAt(0).toUpperCase() + tag.slice(1) }</a> </li>
                 <BlogListing posts={pages} />

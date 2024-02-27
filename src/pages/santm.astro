@@ -1,13 +1,21 @@
 ---
-import BaseLayout from '../layouts/BaseLayout-new.astro';
-const title = "Page Not Found";
-let description = 'error 404';
-import { Image } from "astro:assets";
-import fourofour from '../assets/404.svg';
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+import BaseLayout from '@layouts/BaseLayout.astro';
+const title = "Home Page";
 ---
-
-<BaseLayout content={{ title, description }}>
-test test
-
+<BaseLayout content={{ title }} data-pagefind-ignore>
+    <main class="space-y-40 mb-40">
+        <h1 class="text-6xl font-serif" >
+          Lorem ipsum dolor, s pariatur dignissimos?
+        </h1>
+        <h1 class="text-6xl" >
+          Lorem ipsum dolor, s pariatur dignissimos?
+        </h1>
+        <div class="inline-block bg-gradient-to-tl from-blue-600 via-transparent to-purple-400 p-px rounded-xl mb-3">
+          <div class="bg-white rounded-xl py-1.5 px-3 text-3xl font-bold md:text-4xl lg:text-5xl lg:leading-tight dark:bg-slate-900">
+            <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-purple-400 text-transparent">
+              170+
+            </span>
+          </div>
+        </div>
+      </main>
 </BaseLayout>

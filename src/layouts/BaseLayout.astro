@@ -1,10 +1,10 @@
 ---
-import { SITE } from '../config'
-import BaseHead from '../components/BaseHead.astro';
-import Container from "../components/Container.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import '../assets/styles/custom.css';
+import { SITE } from '@/config'
+import BaseHead from '@components/BaseHead.astro';
+import Container from "@components/Container.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+// import '../assets/styles/custom.css';
 const { content } = Astro.props ;
 import { ViewTransitions } from 'astro:transitions';
 ---
@@ -13,57 +13,22 @@ import { ViewTransitions } from 'astro:transitions';
 <html lang="en">
   <head>
     <BaseHead title={ content.title ? `${content.title} | ${ SITE.title }` : SITE.title } description={ content.description } image={SITE.image}/>
-
-          <script>
-            const setDarkMode = () => {
-            if (localStorage.darkMode === 'true' || (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-              document.documentElement.classList.add('dark');
-              localStorage.darkMode = 'true';
-            } else {
-              document.documentElement.classList.remove('dark');
-              localStorage.darkMode = 'false';
+          <style type="text/css">
+            .dark .dark-bg-radial-gradient
+            {
+              background-image: radial-gradient(closest-side, rgba(76, 29, 149, .40), rgba(76, 29, 149, .10), transparent) !important;
             }
-          };
-          
-          setDarkMode();
-          // Runs on view transitions navigation
-          document.addEventListener('astro:after-swap', setDarkMode);
-          
-          const setDarkModeButton = () => {
-            const button = document.querySelector("#themeToggle");
-            if (button) {  // Check if button is found before attempting to add event listener
-              button.addEventListener('click', function () {
-                document.documentElement.classList.toggle('dark');
-          
-                if (document.documentElement.classList.contains('dark')) {
-                  localStorage.darkMode = 'true';
-                } else {
-                  localStorage.darkMode = 'false';
-                }
-              });
-            }
-          };
-          
-          setDarkModeButton();
-          // Runs on view transitions navigation
-          document.addEventListener('astro:after-swap', setDarkModeButton);
-          </script>
-          
-          
- <ViewTransitions />          
-
+          </style>
+          <ViewTransitions />
   </head>
-  <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
-    <!-- <Header1 /> -->
-    <Header/>
-    <div class="relative">
-      <Container>  
-          <div class="relative pt-36 pb-10 ml-auto">
-              <slot />
-          </div>
-      <Container />
-  </div>
+  <body class="dark:bg-slate-900">
+    <Header />
+    <Container>
+      <slot />
+    </Container>
     <Footer />
-    
-</body>
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
 </html>
