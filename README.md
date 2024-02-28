@@ -12,6 +12,10 @@
 - pnpm add @astrojs/rss
 - pnpm add dayjs **modify time** of markdown
 
+## asro check fails 
+
+- looks like it was added sometime in astro distribution; in package.json before **build** and that s where my scripts are failing
+
 ```
 $ cat .prettierrc
 {
@@ -120,3 +124,19 @@ H1 Dark bg-gradient-to-l from-blue-300 via-violet-600 to-rose-500 bg-clip-text t
 ⚒️ Analytics plausible.io
 ⚒️ switcher icon https://toggles.dev/
 ⚒️ blog card border bottom ; for now we added gradient border
+✅ Search no more javascrip error
+	- https://scottwillsey.com/astro-pagefind/#main-nav ( for CSS)
+	- https://minifloppy.it/posts/2024/adding-pagefind-search-astro-website/ (or code)
+	- passing through <slot> </slot> fixed JS 
+	- creating custom global css for search page - help form developer tool and open-ai helped 
+⚒️ sitemap is not yet fixed ;
+⚒️ lots of icon in head for seo is missing 
+
+### Search 
+
+document.addEventListener("astro:page-load", function()
+            {
+                new PagefindUI({ element: "#search", resetStyles: false });
+            });   
+
+fixed the issue of script not loadingin first time 

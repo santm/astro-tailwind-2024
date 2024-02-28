@@ -22,10 +22,18 @@ let description = 'A simple client side search page using pagefind' ;
 
     {/* 4. Initialize things */}
     <script is:inline>
-        window.addEventListener("DOMContentLoaded", function()
-        {
-            new PagefindUI({ element: "#search", resetStyles: false });
-        });
+
+
+// Add the event listener
+
+// document.addEventListener("DOMContentLoaded", function()
+//             {
+//                 new PagefindUI({ element: "#search", resetStyles: false });
+//             });
+document.addEventListener("astro:page-load", function()
+            {
+                new PagefindUI({ element: "#search", resetStyles: false });
+            });   
     </script>
 </slot>
 </BaseLayout>
